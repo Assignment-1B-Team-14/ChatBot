@@ -20,7 +20,7 @@ A step by step series of examples that tell you have to get a development env ru
 
 ## Built With
 [Technology Stack:](https://github.com/Assignment-1B-Team-14/ChatBot/blob/master/docs/TechnologyStack.jpg)
-![Technology Stack](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/TechnologyStack.jpg)
+![Technology Stack](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/docs/TechnologyStack.jpg)
 
 ### Team Members
 - Shailendrasinh Vijaysinh Jadeja

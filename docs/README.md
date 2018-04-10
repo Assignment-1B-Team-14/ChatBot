@@ -19,8 +19,8 @@ Give examples
 A step by step series of examples that tell you have to get a development env running
 
 ## Built With
-
-![Technology Stack](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/docs/TechnologyStack.jpg)
+[Technology Stack:](https://www.google.com)
+![Technology Stack](https://github.com/Assignment-1B-Team-14/ChatBot/blob/master/docs/TechnologyStack.jpg)
 
 ### Team Members
 - Shailendrasinh Vijaysinh Jadeja

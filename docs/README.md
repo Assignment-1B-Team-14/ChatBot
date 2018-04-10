@@ -1,6 +1,6 @@
 # ChatBot Team 14
 
-Creating a ChatBot for AUT Software Engeneering Lecture (Semseter 1 / 2018)
+Creating a [Chat Bot](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/docs/Assigment1B.pdf) for AUT Software Engeneering Lecture (Semseter 1 / 2018)
 
 ## Getting Started
 

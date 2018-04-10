@@ -1,6 +1,6 @@
 # ChatBot Team 14
 
-Creating a ChatBot for AUT Software Engeneering Lecutre (Semseter 1 / 2018)
+Creating a ChatBot for AUT Software Engeneering Lecture (Semseter 1 / 2018)
 
 ## Getting Started
 

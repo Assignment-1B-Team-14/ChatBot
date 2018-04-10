@@ -19,10 +19,72 @@ Give examples
 A step by step series of examples that tell you have to get a development env running
 
 ## Built With
+
+### Tools
+
+#### Code Colaboration
+
+```
+GitHub
+```
+
+#### Continuous integration and delivery
+
+```
+TravisCI
+```
+
+#### Task Tracking
+
+```
+Asana
+```
+
+___
+
+### Technology Stack
+
+Three-Tier-System
+
+#### Database Tier:
+
+```
+MySql
+```
+
+#### Bussiness Tier:
+
+```
+Spring Boot
+
+RESTfull Service
+
+Security via Spring Security
+
+Database Acess with JPA and Spring Data
+```
+
+#### Frontend Tier:
+
+```
+Mobile Devices:   React Native Apps
+
+Desktop Devices:  React.js (Maybe with Electron)
+```
+
+#### Other:
+
+```
+Docker
+```
+
+___
+
 [Technology Stack:](https://github.com/Assignment-1B-Team-14/ChatBot/blob/master/docs/TechnologyStack.jpg)
 ![Technology Stack](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/docs/TechnologyStack.jpg)
 
 ### Team Members
+
 - Shailendrasinh Vijaysinh Jadeja
 - Antony Nugroho
 - Florian Widder

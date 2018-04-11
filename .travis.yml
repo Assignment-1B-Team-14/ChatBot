@@ -17,6 +17,7 @@ matrix:
       - "node"
       - "8"
       before_script:
+        - dir
         - cd frontend
       script:
         - cd web

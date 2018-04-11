@@ -18,13 +18,21 @@ matrix:
       - "8"
       before_script:
         - dir
-        - cd frontend
+        - cd code/frontend/web
       script:
-        - cd web
         - node install
         - node test
         - node build
-        - cd ../mobile
+
+    - language: node_js
+      sudo: required
+      node_js:
+        - "node"
+        - "8"
+      before_script:
+        - dir
+        - cd code/frontend/mobile
+      script:
         - node install
         - node test
 

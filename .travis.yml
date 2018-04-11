@@ -6,7 +6,6 @@ matrix:
       before_script:
         - cd code/backend
       script:
-        - dir
         - sudo chmod 777 mvnw
         - ./mvnw test
         - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
@@ -17,12 +16,11 @@ matrix:
       - "node"
       - "8"
       before_script:
-        - dir
         - cd code/frontend/web
       script:
-        - node install
-        - node test
-        - node build
+        - npm install
+        - npm test
+        - npm build
 
     - language: node_js
       sudo: required
@@ -30,14 +28,16 @@ matrix:
         - "node"
         - "8"
       before_script:
-        - dir
         - cd code/frontend/mobile
       script:
-        - node install
-        - node test
+        - npm install
+        - npm test
 
 cache:
-  yarn: true
+  directories:
+  - .autoconf
+  - $HOME/.m2
+  - node_modules
 
 notifications:
   email:

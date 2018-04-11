@@ -20,7 +20,7 @@ matrix:
       script:
         - npm install
         - npm test
-        - npm build
+        - npm run build
 
     - language: node_js
       sudo: required

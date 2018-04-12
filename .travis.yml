@@ -1,0 +1,44 @@
+matrix:
+  include:
+    - language: java
+      sudo: required
+      jdk: oraclejdk8
+      before_script:
+        - cd code/backend
+      script:
+        - sudo chmod 777 mvnw
+        - ./mvnw test
+        - ./mvnw install
+
+    - language: node_js
+      sudo: required
+      node_js:
+      - "node"
+      - "8"
+      before_script:
+        - cd code/frontend/web
+      script:
+        - npm install
+        - npm test
+        - npm run build
+
+    - language: node_js
+      sudo: required
+      node_js:
+        - "node"
+        - "8"
+      before_script:
+        - cd code/frontend/mobile
+      script:
+        - npm install
+        - npm test
+
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
+  - node_modules
+
+notifications:
+  email:
+    - florian.widder@live.de

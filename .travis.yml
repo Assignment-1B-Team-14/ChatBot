@@ -15,11 +15,10 @@ matrix:
       node_js:
       - "node"
       - "8"
-      install:
-        - npm install
       before_script:
         - cd code/frontend/web
       script:
+        - npm install
         - npm test
         - npm run build
 
@@ -28,11 +27,10 @@ matrix:
       node_js:
         - "node"
         - "8"
-      install:
-        - npm install
       before_script:
         - cd code/frontend/mobile
       script:
+        - npm install
         - npm test
 
 cache:

@@ -42,7 +42,7 @@ git add -f.
 git remote rm origin
 git remote add origin https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot
 git add -f
-git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed"
+git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"
 git push origin master -fq
 
 echo "Done!"

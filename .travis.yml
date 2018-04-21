@@ -39,6 +39,20 @@ matrix:
       script:
         -  npm install
         - cd android && ./gradlew assembleRelease
+before_deploy:
+  - git config --local user.name "Florian Widder"
+  - git config --local user.email "florian.widder@live.de"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
+deploy:
+  provider: releases
+  api_key: "895ea69cba99f83eeabe7538489c4c023a0ebea3"
+  file_glob: true
+  file:
+    - "code/frontend/mobile/android/app/build/outputs/apk/*"
+    - "code/frontend/web/build/*"
+    - "code/backend/build/*.jar"
+  skip_cleanup: true
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock

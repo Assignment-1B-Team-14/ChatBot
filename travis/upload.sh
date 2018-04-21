@@ -15,7 +15,7 @@ mkdir builds/Backend-Server
   cp -fr $TRAVIS_BUILD_DIR/code/frontend/mobile/android/app/build/outputs/apk/* $HOME/builds/Android-App
 
   ### Web-Page ###
-  cp -fr $TRAVIS_BUILD_DIR/code/frontend/web/build/ $HOME/builds/Web-Page/*
+  cp -fr $TRAVIS_BUILD_DIR/code/frontend/web/build/* $HOME/builds/Web-Page/
 
   ### iOS-App ###
   touch $HOME/builds/iOS-App/note.txt

@@ -70,7 +70,7 @@ In this step we will build the backend and get it running locally.
 
 ```
 # go to backend directory
-cd cd ChatBot/code/backend/
+cd ChatBot/code/backend/
 # compile the code and build a runnable .jar file
 ./ mvnw install
 # go to target directory
@@ -83,6 +83,7 @@ If no errors occurred the backend should be up and running on your local machine
 ##### Step 3 - Compile and start the frontend
 
 To start the frontend, we have to open a second shell first.
+You can do this by pressing ``` CTRL+ALT+T ```.
 In the new shell, go to the root directory of the ChatBot project.
 
 ```

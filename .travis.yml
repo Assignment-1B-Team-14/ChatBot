@@ -6,7 +6,7 @@ matrix:
       before_script:
         - cd code/backend
       script:
-        - sudo chmod 777 mvnw
+        - sudo chmod +x mvnw
         - ./mvnw test
         - ./mvnw install
 

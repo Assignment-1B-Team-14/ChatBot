@@ -82,7 +82,7 @@ If no errors occurred the backend should be up and running on your local machine
 
 ##### Step 3 - Compile and start the frontend
 
-To start the frontend, we have to open a second shell first (```CTRL + ALT +t```). 
+To start the frontend, we have to open a second shell first (```CTRL + ALT +t```).
 In the new shell, go to the root directory of the ChatBot project.
 
 ```
@@ -125,7 +125,7 @@ cd code/frontend/web/
 # download the dependencies
 npm install
 # run the web frontend in development mode
-npm start
+react-native run-android
 ```
 
 Yarn (if installed) can be used as an alternative to npm.
@@ -136,7 +136,7 @@ cd code/frontend/web/
 # download the dependencies
 yarn install
 # run the web frontend in development mode
-yarn start
+react-native run-android
 ```
 
 Now the server for the web should be running frontend. Normally your standard internet browser should open automatically with the mobile website. If this is not the case, open your browser and go to the following url:

@@ -31,10 +31,12 @@ git config --global user.email "florian.widder@live.de"
 git config --global user.name "Florian Widder"
 
 ##### Clone Master Branch ######
-dir -lha
+cd $HOME
+echo git
 git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot master
 
 ##### Copy Files #####
+echo copy
 cp -rf $HOME/build $HOME/master/build
 
 ##### Upload to Git #####

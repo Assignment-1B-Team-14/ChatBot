@@ -1,5 +1,7 @@
-matrix:
+- matrix:
   include:
+
+    # Backend
     - language: java
       sudo: required
       jdk: oraclejdk8
@@ -10,6 +12,7 @@ matrix:
         - ./mvnw test
         - ./mvnw install
 
+    #Web
     - language: node_js
       sudo: required
       node_js:
@@ -22,6 +25,7 @@ matrix:
         - npm test
         - npm run build
 
+    #Mobile
     - language: android
       sudo: required
       before_script:
@@ -38,20 +42,17 @@ matrix:
       script:
         -  npm install
         - cd android && ./gradlew assembleRelease
-before_deploy:
-  - git config --local user.name "Florian Widder"
-  - git config --local user.email "florian.widder@live.de"
-  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
-after_success:
+- after_success:
   - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
   - cd $TRAVIS_BUILD_DIR/travis/
   - ./upload.sh
 
-before_cache:
+- before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-cache:
+
+- cache:
   directories:
   - .autoconf
   - $HOME/.m2
@@ -60,6 +61,6 @@ cache:
   - $HOME/.gradle/
   - $HOME/.android/build-cache
 
-notifications:
+- notifications:
   email:
     - florian.widder@live.de

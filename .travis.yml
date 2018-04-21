@@ -68,8 +68,8 @@ matrix:
      #######################################
 
 after_success:
-  - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
-  - cd $TRAVIS_BUILD_DIR/travis/
+  - chmod +x $TRAVIS_BUILD_DIR/.travis/upload.sh
+  - cd $TRAVIS_BUILD_DIR/.travis/
   - ./upload.sh
 
 before_cache:

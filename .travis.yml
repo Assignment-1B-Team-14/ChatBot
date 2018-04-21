@@ -14,7 +14,7 @@ matrix:
         - ./mvnw test
         - ./mvnw install
 
-    #Web
+    # Web
     - language: node_js
       sudo: required
       node_js:
@@ -29,14 +29,15 @@ matrix:
         - npm test
         - npm run build
 
-    #Mobile Android
+    # Mobile Android
     - language: android
       sudo: required
       env:
           - TYPE=ANDROID
       before_script:
         - cd code/frontend/mobile
-        - nvm install 6
+        - nvm install 8
+      node_js: 8
       android:
         components:
           - build-tools-23.0.1
@@ -46,9 +47,26 @@ matrix:
           - extra-google-m2repository
           - addon-google_apis-google-16
       script:
-        -  npm install
+        - npm install
         - cd android && ./gradlew assembleRelease
 
+    # Mobile iOS
+    - language: objective-c
+      os: osx
+      osx_image: xcode8.3
+      node_js: 8
+      env: TYPE=IOS
+      before_script:
+        - cd code/frontend/mobile
+
+     #######################################
+     #######################################
+     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
+     ### !!! TODO: iOS Build Skript  !!! ###
+     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
+     #######################################
+     #######################################
+     
 after_success:
   - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
   - cd $TRAVIS_BUILD_DIR/travis/

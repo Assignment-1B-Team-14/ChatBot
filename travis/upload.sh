@@ -1,28 +1,45 @@
 ##### PREPARE #####
-
 sudo chmod 777 -R $HOME
 
 ##### Create Output Folders #####
 cd $HOME
-mkdir builds/Web-Page
-mkdir builds/Android-App
-mkdir builds/iOS-App
-mkdir builds/Backend-Server
+case $TYPE in
+	ANDROID)
+    mkdir builds/Android-App
+		;;
+	WEB)
+    mkdir builds/Web-Page
+		;;
+	IOS)
+    mkdir builds/iOS-App
+		;;
+	BACKEND)
+    mkdir builds/Backend-Server
+		;;
+	*)
+		echo "ERROR Unkown Type $TYPE"
+		;;
+esac
 
 ##### Copy Files #####
-
-  ### Android-App ###
-  cp -fr $TRAVIS_BUILD_DIR/code/frontend/mobile/android/app/build/outputs/apk/* $HOME/builds/Android-App
-
-  ### Web-Page ###
-  cp -fr $TRAVIS_BUILD_DIR/code/frontend/web/build/* $HOME/builds/Web-Page/
-
-  ### iOS-App ###
-  touch $HOME/builds/iOS-App/note.txt
-  echo "No iOS App Present!!!" > $HOME/builds/iOS-App/note.txt
-
-  ### Backend-Server ###
-  cp -fr $TRAVIS_BUILD_DIR/code/backend/target/*.jar $HOME/builds/Backend-Server
+case $TYPE in
+	ANDROID)
+    cp -fr $TRAVIS_BUILD_DIR/code/frontend/mobile/android/app/build/outputs/apk/* $HOME/builds/Android-App
+		;;
+	WEB)
+    cp -fr $TRAVIS_BUILD_DIR/code/frontend/web/build/* $HOME/builds/Web-Page/
+		;;
+	IOS)
+    touch $HOME/builds/iOS-App/note.txt
+    echo "No iOS App Present!!!" > $HOME/builds/iOS-App/note.txt
+		;;
+	BACKEND)
+    cp -fr $TRAVIS_BUILD_DIR/code/backend/target/*.jar $HOME/builds/Backend-Server
+		;;
+	*)
+		echo "ERROR Unkown Type $TYPE"
+		;;
+esac
 
 ##### Setup Git #####
 cd $HOME
@@ -47,13 +64,15 @@ case $TYPE in
 	*)
 		echo "ERROR Unkown Type $TYPE"
 		;;
-  esac
+esac
+
 ##### Copy Files #####
 mkdir $HOME/master/build
 mv -f $HOME/builds/* $HOME/master/build
 
 ##### Upload to Git #####
 cd $HOME/master/
+
 git add -f ./build/*
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"
 git push origin builds:builds -fq

@@ -1,4 +1,4 @@
-- matrix:
+matrix:
   include:
 
     # Backend
@@ -43,16 +43,16 @@
         -  npm install
         - cd android && ./gradlew assembleRelease
 
-- after_success:
+after_success:
   - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
   - cd $TRAVIS_BUILD_DIR/travis/
   - ./upload.sh
 
-- before_cache:
+before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
-- cache:
+cache:
   directories:
   - .autoconf
   - $HOME/.m2
@@ -61,6 +61,6 @@
   - $HOME/.gradle/
   - $HOME/.android/build-cache
 
-- notifications:
+notifications:
   email:
     - florian.widder@live.de

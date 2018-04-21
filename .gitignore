@@ -1,21 +1,15 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
-
-### STS ###
 .apt_generated
 .classpath
 .factorypath
 .project
 .settings
 .springBeans
-
-### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-
-### NetBeans ###
 nbproject/private/
 build/
 nbbuild/
@@ -23,14 +17,8 @@ dist/
 nbdist/
 .nb-gradle/
 /.mvn
-/frontend/node_modules
 /node_and_yarn
-/src/main/resources/static
 /mvnw
 /mvnw.cmd
-/mvnw.cmd
-/mvnw
-/src/main/resources/static/static/css
-/src/main/resources/templates/index.html
 /bin
 Thumbs.db

@@ -26,11 +26,8 @@ matrix:
       sudo: required
       before_script:
         - cd code/frontend/mobile
-      before_install:
         - nvm install 6
-        - node --version
-      install:
-        -  npm install
+        - node --version        
       android:
         components:
           - build-tools-23.0.1
@@ -40,6 +37,7 @@ matrix:
           - extra-google-m2repository
           - addon-google_apis-google-16
       script:
+        -  npm install
         - cd android && ./gradlew assembleRelease
 
 before_cache:
@@ -51,8 +49,7 @@ cache:
   - $HOME/.m2
   - code/frontend/mobile/node_modules
   - code/frontend/web/node_modules
-  - $HOME/.gradle/caches/
-  - $HOME/.gradle/wrapper/
+  - $HOME/.gradle/
   - $HOME/.android/build-cache
 
 notifications:

@@ -6,7 +6,7 @@ matrix:
       sudo: required
       jdk: oraclejdk8
       env:
-          - type=BACKEND
+          - TYPE=BACKEND
       before_script:
         - cd code/backend
       script:
@@ -21,7 +21,7 @@ matrix:
       - "node"
       - "8"
       env:
-          - type=WEB
+          - TYPE=WEB
       before_script:
         - cd code/frontend/web
       script:
@@ -33,7 +33,7 @@ matrix:
     - language: android
       sudo: required
       env:
-          - type=ANDROID
+          - TYPE=ANDROID
       before_script:
         - cd code/frontend/mobile
         - nvm install 6

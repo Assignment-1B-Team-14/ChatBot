@@ -31,7 +31,23 @@ git config --global user.name "Florian Widder"
 
 ##### Clone Master Branch ######
 git clone --quiet --branch builds https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot $HOME/master
-rm -rf $HOME/master/build
+case $TYPE in
+	ANDROID)
+		rm -rf $HOME/master/build/Android-App
+		;;
+	WEB)
+		rm -rf $HOME/master/build/Web-Page
+		;;
+	IOS)
+		rm -rf $HOME/master/build/iOS-App
+		;;
+	BACKEND)
+		rm -rf $HOME/master/build/Backend-Server
+		;;
+	*)
+		echo "ERROR Unkown Type $TYPE"
+		;;
+  esac
 ##### Copy Files #####
 mkdir $HOME/master/build
 mv -f $HOME/builds/* $HOME/master/build

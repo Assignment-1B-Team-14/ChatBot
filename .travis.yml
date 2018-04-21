@@ -27,7 +27,6 @@ matrix:
       before_script:
         - cd code/frontend/mobile
         - nvm install 6
-        - node --version
       android:
         components:
           - build-tools-23.0.1
@@ -45,9 +44,8 @@ before_deploy:
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
 after_success:
-  - cd $TRAVIS_BUILD_DIR
-  - chmod +x /travis/upload.sh
-  - ./travis/upload.sh
+  - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
+  - .$TRAVIS_BUILD_DIR/travis/upload.sh
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock

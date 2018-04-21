@@ -1,20 +1,27 @@
 matrix:
   include:
+
+    # Backend
     - language: java
       sudo: required
       jdk: oraclejdk8
+      env:
+          - TYPE=BACKEND
       before_script:
         - cd code/backend
       script:
-        - sudo chmod 777 mvnw
+        - sudo chmod +x mvnw
         - ./mvnw test
         - ./mvnw install
 
+    # Web
     - language: node_js
       sudo: required
       node_js:
       - "node"
       - "8"
+      env:
+          - TYPE=WEB
       before_script:
         - cd code/frontend/web
       script:
@@ -22,22 +29,61 @@ matrix:
         - npm test
         - npm run build
 
-    - language: node_js
+    # Mobile Android
+    - language: android
       sudo: required
-      node_js:
-        - "node"
-        - "8"
+      env:
+          - TYPE=ANDROID
       before_script:
         - cd code/frontend/mobile
+        - nvm install 8
+      node_js: 8
+      android:
+        components:
+          - build-tools-23.0.1
+          - android-23
+          - extra-android-m2repository
+          - extra-google-google_play_services
+          - extra-google-m2repository
+          - addon-google_apis-google-16
       script:
         - npm install
-        - npm test
+        - cd android && ./gradlew assembleRelease
+
+    # Mobile iOS
+    - language: objective-c
+      os: osx
+      osx_image: xcode8.3
+      node_js: 8
+      env: TYPE=IOS
+      before_script:
+        - cd code/frontend/mobile
+
+     #######################################
+     #######################################
+     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
+     ### !!! TODO: iOS Build Skript  !!! ###
+     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
+     #######################################
+     #######################################
+     
+after_success:
+  - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
+  - cd $TRAVIS_BUILD_DIR/travis/
+  - ./upload.sh
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
 cache:
   directories:
   - .autoconf
   - $HOME/.m2
-  - node_modules
+  - code/frontend/mobile/node_modules
+  - code/frontend/web/node_modules
+  - $HOME/.gradle/
+  - $HOME/.android/build-cache
 
 notifications:
   email:

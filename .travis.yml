@@ -45,7 +45,7 @@ before_deploy:
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
 after_success:
-  - dir -ahl
+  - cd $TRAVIS_BUILD_DIR
   - chmod +x /travis/upload.sh
   - ./travis/upload.sh
 

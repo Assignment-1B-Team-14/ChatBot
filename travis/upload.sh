@@ -30,7 +30,8 @@ cd $HOME
 git config --global user.email "florian.widder@live.de"
 git config --global user.name "Florian Widder"
 
-##### Clone Master Branch #####
+##### Clone Master Branch ######
+dir -lha
 git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot master
 
 ##### Copy Files #####
@@ -43,6 +44,6 @@ cd $HOME/master
 git remote rm origin
 git remote add origin https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"
-git push origin master -fq
+git push origin builds -fq
 
 echo "Done!"

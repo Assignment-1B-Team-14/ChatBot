@@ -4,26 +4,26 @@ sudo chmod 777 -R $HOME
 
 ##### Create Output Folders #####
 cd $HOME
-mkdir build
-mkdir build/Web-Page
-mkdir build/Android-App
-mkdir build/iOS-App
-mkdir build/Backend-Server
+mkdir builds
+mkdir builds/Web-Page
+mkdir builds/Android-App
+mkdir builds/iOS-App
+mkdir builds/Backend-Server
 
 ##### Copy Files #####
 
   ### Android-App ###
-  cp -fr $TRAVIS_BUILD_DIR/code/frontend/mobile/android/app/build/outputs/apk/ $HOME/build/Android-App
+  cp -fr $TRAVIS_BUILD_DIR/code/frontend/mobile/android/app/build/outputs/apk/ $HOME/builds/Android-App
 
   ### Web-Page ###
-  cp -fr $TRAVIS_BUILD_DIR/code/frontend/web/build/ $HOME/build/Web-Page
+  cp -fr $TRAVIS_BUILD_DIR/code/frontend/web/build/ $HOME/builds/Web-Page
 
   ### iOS-App ###
-  touch $HOME/build/iOS-App/note.txt
-  echo "No iOS App Present!!!" > $HOME/build/iOS-App/note.txt
+  touch $HOME/builds/iOS-App/note.txt
+  echo "No iOS App Present!!!" > $HOME/builds/iOS-App/note.txt
 
   ### Backend-Server ###
-  cp -fr $TRAVIS_BUILD_DIR/code/backend/build/ $HOME/build/Backend-Server
+  cp -fr $TRAVIS_BUILD_DIR/code/backend/build/ $HOME/builds/Backend-Server
 
 ##### Setup Git #####
 cd $HOME
@@ -31,7 +31,7 @@ git config --global user.email "florian.widder@live.de"
 git config --global user.name "Florian Widder"
 
 ##### Clone Master Branch ######
-cd $HOME/build
+cd $HOME/builds
 echo 0
 dir
 git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot $HOME/master
@@ -39,10 +39,10 @@ echo 1
 dir
 
 ##### Copy Files #####
-cd $HOME/build
+cd $HOME/builds
 echo 2
 dir
-mv -f $HOME/build $HOME/master/build
+mv -f $HOME/builds $HOME/master/build
 echo 3
 dir
 

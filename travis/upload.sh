@@ -1,8 +1,6 @@
-#!/usr/bin/env bash
+##### PREPARE #####
 
 sudo chmod 777 -R $HOME
-
-dir -alh
 
 ##### Create Output Folders #####
 cd $HOME
@@ -15,20 +13,17 @@ mkdir build/Backend-Server
 ##### Copy Files #####
 
   ### Android-App ###
-  cp -fr code/frontend/mobile/android/app/build/outputs/apk/ build/Android-App
+  cp -fr $TRAVIS_BUILD_DIR/code/frontend/mobile/android/app/build/outputs/apk/ $HOME/build/Android-App
 
   ### Web-Page ###
-  cp -fr code/frontend/web/build/ build/Web-Page
+  cp -fr $TRAVIS_BUILD_DIR/code/frontend/web/build/ $HOME/build/Web-Page
 
   ### iOS-App ###
-  touch build/iOS-App/note.txt
-  echo "No iOS App Present!!!" > build/iOS-App/note.txt
+  touch $HOME/build/iOS-App/note.txt
+  echo "No iOS App Present!!!" > $HOME/build/iOS-App/note.txt
 
   ### Backend-Server ###
-  cp -fr code/backend/build/ /build/Backend-Server
-
-##### Set File Permissions #####
-chmod 777 -R build
+  cp -fr $TRAVIS_BUILD_DIR/code/backend/build/ $HOME/build/Backend-Server
 
 ##### Setup Git #####
 cd $HOME
@@ -36,20 +31,15 @@ git config --global user.email "florian.widder@live.de"
 git config --global user.name "Florian Widder"
 
 ##### Clone Master Branch #####
-git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot master
+git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot $HOME/master
 
 ##### Copy Files #####
-cd master
-cp -rf $HOME/build /build
-
-cd /build
-dir -ahl
-cd ..
+cp -rf $HOME/build $HOME/master/build
 
 ##### Upload to Git #####
-cd /build
+cd $HOME/master/build
 git add -f .
-cd ..
+cd $HOME/master
 #xxxgit remote rm origin
 #xxxgit remote add origin https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot
 #xxxgit commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"

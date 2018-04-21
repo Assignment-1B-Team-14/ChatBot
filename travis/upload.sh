@@ -39,6 +39,6 @@ mv -f $HOME/builds $HOME/master/build
 cd $HOME/master/
 git add -f ./build/*
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"
-git push origin master:builds -fq
+git push origin builds:builds -fq
 
 echo "Done!"

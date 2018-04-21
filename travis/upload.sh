@@ -38,9 +38,8 @@ git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assig
 cp -rf $HOME/build $HOME/master/build
 
 ##### Upload to Git #####
-cd $HOME/master/build
-git add -f .
-cd $HOME/master
+cd $HOME/master/
+git add -f ./build/*
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"
 git push origin builds -fq
 

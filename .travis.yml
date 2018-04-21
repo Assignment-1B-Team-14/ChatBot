@@ -1,15 +1,18 @@
 matrix:
   include:
+
+# build and test backend
     - language: java
       sudo: required
       jdk: oraclejdk8
       before_script:
         - cd code/backend
       script:
-        - sudo chmod 777 mvnw
+        - sudo chmod +x mvnw
         - ./mvnw test
         - ./mvnw install
 
+# build and test frontend web
     - language: node_js
       sudo: required
       node_js:
@@ -22,6 +25,7 @@ matrix:
         - npm test
         - npm run build
 
+# build and test frontend mobile
     - language: node_js
       sudo: required
       node_js:

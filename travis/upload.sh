@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+dir -alh
+
 ##### Create Output Folders #####
-mkdir -v $HOME/build
-mkdir -v $Home/build/Web-Page
-mkdir -v $Home/build/Android-App
-mkdir -v $Home/build/iOS-App
-mkdir -v $Home/build/Backend-Server
+mkdir $HOME/build
+mkdir $Home/build/Web-Page
+mkdir $Home/build/Android-App
+mkdir $Home/build/iOS-App
+mkdir $Home/build/Backend-Server
 
 ##### Copy Files #####
 
@@ -27,22 +29,27 @@ chmod -r 444 $HOME/build
 
 ##### Setup Git #####
 cd $HOME
-git config --global user.email "florian.widder@live.de"
-git config --global user.name "Florian Widder"
+#xxxgit config --global user.email "florian.widder@live.de"
+#xxxgit config --global user.name "Florian Widder"
 
 ##### Clone Master Branch #####
-git clone --quiet --branch master = https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot master > /dev/null
+git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot master
 
 ##### Copy Files #####
 cd master
-cp -rf $HOME/build
+cp -rf $HOME/build /build
+
+cd /build
+dir -ahl
+cd ..
 
 ##### Upload to Git #####
-git add -f.
-git remote rm origin
-git remote add origin https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot
-git add -f
-git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"
-git push origin master -fq
+cd /build
+git add -f .
+cd ..
+#xxxgit remote rm origin
+#xxxgit remote add origin https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot
+#xxxgit commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"
+#xxxgit push origin master -fq
 
 echo "Done!"

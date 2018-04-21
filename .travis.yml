@@ -45,8 +45,9 @@ before_deploy:
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
 after_success:
+  - dir -ahl
   - chmod +x /travis/upload.sh
-  - ./travis/upload.sh 
+  - ./travis/upload.sh
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock

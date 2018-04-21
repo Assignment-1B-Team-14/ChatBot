@@ -1,4 +1,5 @@
 ##### PREPARE #####
+if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then exit; fi
 sudo chmod 777 -R $HOME
 
 ##### Create Output Folders #####

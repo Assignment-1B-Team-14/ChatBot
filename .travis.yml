@@ -1,17 +1,17 @@
 matrix:
   include:
-#
-#    # Backend
-#    - language: java
-#      sudo: required
-#      jdk: oraclejdk8
-#      before_script:
-#        - cd code/backend
-#      script:
-#        - sudo chmod +x mvnw
-#        - ./mvnw test
-#        - ./mvnw install
-#
+
+    # Backend
+    - language: java
+      sudo: required
+      jdk: oraclejdk8
+      before_script:
+        - cd code/backend
+      script:
+        - sudo chmod +x mvnw
+        - ./mvnw test
+        - ./mvnw install
+
     #Web
     - language: node_js
       sudo: required
@@ -24,25 +24,25 @@ matrix:
         - npm install
         - npm test
         - npm run build
-#
-#    #Mobile
-#    - language: android
-#      sudo: required
-#      before_script:
-#        - cd code/frontend/mobile
-#        - nvm install 6
-#      android:
-#        components:
-#          - build-tools-23.0.1
-#          - android-23
-#          - extra-android-m2repository
-#          - extra-google-google_play_services
-#          - extra-google-m2repository
-#          - addon-google_apis-google-16
-#      script:
-#        -  npm install
-#        - cd android && ./gradlew assembleRelease
-#
+
+    #Mobile
+    - language: android
+      sudo: required
+      before_script:
+        - cd code/frontend/mobile
+        - nvm install 6
+      android:
+        components:
+          - build-tools-23.0.1
+          - android-23
+          - extra-android-m2repository
+          - extra-google-google_play_services
+          - extra-google-m2repository
+          - addon-google_apis-google-16
+      script:
+        -  npm install
+        - cd android && ./gradlew assembleRelease
+
 after_success:
   - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
   - cd $TRAVIS_BUILD_DIR/travis/
@@ -60,8 +60,7 @@ cache:
   - code/frontend/web/node_modules
   - $HOME/.gradle/
   - $HOME/.android/build-cache
-#
-#notifications:
-#  email:
-#    - florian.widder@live.de
-#
+
+notifications:
+  email:
+    - florian.widder@live.de

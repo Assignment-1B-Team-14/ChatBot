@@ -33,6 +33,7 @@ git config --global user.name "Florian Widder"
 git clone --quiet --branch builds https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot $HOME/master
 rm -rf $HOME/master/build
 ##### Copy Files #####
+mkdir $HOME/master/build
 mv -f $HOME/builds/* $HOME/master/build
 
 ##### Upload to Git #####

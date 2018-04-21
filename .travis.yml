@@ -7,18 +7,10 @@ matrix:
       jdk: oraclejdk8
       before_script:
         - cd code/backend
+      script:
         - sudo chmod +x mvnw
-      jobs:
-        inlucde:
-          - stage:  test
-            script:
-              - ./mvnw test
-          - stage:  build
-            script:
-              - ./mvnw install
-          - stage:  deploy
-            script:
-              - echo "Deployment mot implemented!"
+        - ./mvnw test
+        - ./mvnw install
 
 # build and test frontend web
     - language: node_js

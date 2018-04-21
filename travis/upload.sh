@@ -1,36 +1,39 @@
 #!/usr/bin/env bash
 
+sudo chmod 777 -R $HOME
+
 dir -alh
 
 ##### Create Output Folders #####
-mkdir $HOME/build
-mkdir $Home/build/Web-Page
-mkdir $Home/build/Android-App
-mkdir $Home/build/iOS-App
-mkdir $Home/build/Backend-Server
+cd $HOME
+mkdir build
+mkdir build/Web-Page
+mkdir build/Android-App
+mkdir build/iOS-App
+mkdir build/Backend-Server
 
 ##### Copy Files #####
 
   ### Android-App ###
-  cp -fr code/frontend/mobile/android/app/build/outputs/apk/ $HOME/build/Android-App
+  cp -fr code/frontend/mobile/android/app/build/outputs/apk/ build/Android-App
 
   ### Web-Page ###
-  cp -fr code/frontend/web/build/ $HOME/build/Web-Page
+  cp -fr code/frontend/web/build/ build/Web-Page
 
   ### iOS-App ###
-  touch $HOME/build/iOS-App/note.txt
-  echo "No iOS App Present!!!" > $HOME/build/iOS-App/note.txt
+  touch build/iOS-App/note.txt
+  echo "No iOS App Present!!!" > build/iOS-App/note.txt
 
   ### Backend-Server ###
-  cp -fr code/backend/build/ $HOME/build/Backend-Server
+  cp -fr code/backend/build/ /build/Backend-Server
 
 ##### Set File Permissions #####
-chmod -r 444 $HOME/build
+chmod 777 -R build
 
 ##### Setup Git #####
 cd $HOME
-#xxxgit config --global user.email "florian.widder@live.de"
-#xxxgit config --global user.name "Florian Widder"
+git config --global user.email "florian.widder@live.de"
+git config --global user.name "Florian Widder"
 
 ##### Clone Master Branch #####
 git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot master

@@ -33,16 +33,20 @@ git config --global user.name "Florian Widder"
 ##### Clone Master Branch ######
 cd $HOME
 git clone --quiet --branch master https://fwidder:$OAUTH_GITHUB@github.com/Assignment-1B-Team-14/ChatBot master
+echo 1
 dir
 
 ##### Copy Files #####
 cd $HOME/build
+echo 2
 dir
-mv -rf $HOME/build $HOME/master/build
+mv -f $HOME/build $HOME/master/build
+echo 3
 dir
 
 ##### Upload to Git #####
 cd $HOME/master/
+echo 4
 dir
 git add -f ./build/*
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed. [skip ci]"

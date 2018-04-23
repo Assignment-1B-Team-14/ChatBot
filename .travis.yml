@@ -43,7 +43,7 @@ matrix:
         - npm install
         - npm test
         - npm run appr
-        
+
 #
 ##################################################
 ## Not needed while working with "mobile-simple" #
@@ -99,7 +99,9 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
-  - */node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/mobile/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/mobile-simple/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/web/node_modules
   - $HOME/.gradle/
   - $HOME/.android/build-cache
 #

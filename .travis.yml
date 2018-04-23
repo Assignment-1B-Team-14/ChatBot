@@ -36,13 +36,12 @@ matrix:
         - "node"
         - "8"
       env:
-          - TYPE=MOBILE_SIMPLE
+          - TYPE=MOBILE_EXPO
       before_script:
         - cd code/frontend/mobile-simple
       script:
         - npm install
         - npm test
-        - sudo npm install exp --global
         - exp login -u $EXP_USERNAME -p $EXP_PASSWORD
         - exp publish --non-interactive
 

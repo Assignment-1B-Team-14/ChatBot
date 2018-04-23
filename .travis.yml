@@ -42,6 +42,7 @@ matrix:
       script:
         - npm install
         - npm test
+        - - 'if [ "$TRAVIS_BRANCH" == "deployment-mobile-simple-test" ] || [ "$TRAVIS_BRANCH" == "master" ]; then npm appr; fi'
 
 #################################################
 # Not needed while working with "mobile-simple" #

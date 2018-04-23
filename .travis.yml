@@ -29,6 +29,23 @@ matrix:
         - npm test
         - npm run build
 
+    # Mobile-Simple
+    - language: node_js
+      sudo: required
+      node_js:
+        - "node"
+        - "8"
+      env:
+          - TYPE=MOBILE_SIMPLE
+      before_script:
+        - cd code/frontend/mobile-simple
+      script:
+        - npm install
+        - npm test
+
+#################################################
+# Not needed while working with "mobile-simple" #
+#################################################
     # Mobile Android
     - language: android
       sudo: required

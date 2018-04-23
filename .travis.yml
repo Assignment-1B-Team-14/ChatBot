@@ -42,7 +42,7 @@ matrix:
       script:
         - npm install
         - npm test
-        - - 'if [ "$TRAVIS_BRANCH" == "deployment-mobile-simple-test" ] || [ "$TRAVIS_BRANCH" == "master" ]; then npm appr; fi'
+        - 'if [ "$TRAVIS_BRANCH" == "deployment-mobile-simple-test" ] || [ "$TRAVIS_BRANCH" == "master" ]; then npm appr; fi'
 
 #################################################
 # Not needed while working with "mobile-simple" #
@@ -100,6 +100,7 @@ cache:
   - $HOME/.m2
   - code/frontend/mobile/node_modules
   - code/frontend/web/node_modules
+  - code/frontend/mobile-simple/node_modules
   - $HOME/.gradle/
   - $HOME/.android/build-cache
 

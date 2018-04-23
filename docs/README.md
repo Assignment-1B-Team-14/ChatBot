@@ -1,4 +1,3 @@
-
 [![Build Status](https://travis-ci.org/Assignment-1B-Team-14/ChatBot.svg?branch=master)](https://travis-ci.org/Assignment-1B-Team-14/ChatBot)
 
 # ChatBot Team 14
@@ -83,7 +82,7 @@ If no errors occurred the backend should be up and running on your local machine
 ##### Step 3 - Compile and start the frontend
 
 To start the frontend, we have to open a second shell first.
-You can do this by pressing ``` CTRL+ALT+T ```.
+You can do this by pressing `CTRL+ALT+T`.
 In the new shell, go to the root directory of the ChatBot project.
 
 ```
@@ -170,7 +169,7 @@ TravisCI
 Asana
 ```
 
-___
+---
 
 ### Technology Stack
 
@@ -202,21 +201,16 @@ Mobile Devices:   React Native Apps
 Desktop Devices:  React.js (Maybe with Electron)
 ```
 
-#### Other:
-
-```
-Docker
-```
-
-___
+---
 
 [Technology Stack:](https://github.com/Assignment-1B-Team-14/ChatBot/blob/master/docs/TechnologyStack.jpg)
 ![Technology Stack](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/docs/TechnologyStack.jpg)
 
 ### Team Members
 
-- Shailendrasinh Vijaysinh Jadeja
-- Antony Nugroho
-- Florian Widder
+* Shailendrasinh Vijaysinh Jadeja
+* Antony Nugroho
+* Florian Widder
+* Ashton Ho
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://assignment-1b-team-14.github.io/ChatBot/)

@@ -42,7 +42,7 @@ matrix:
       script:
         - npm install
         - npm test
-        - npm appr
+        - npm run appr
 #
 ##################################################
 ## Not needed while working with "mobile-simple" #

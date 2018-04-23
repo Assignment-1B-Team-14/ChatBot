@@ -1,6 +1,8 @@
 {
   "name": "ChatBot Mobile-Simple",
   "displayName": "ChatBot Expo App",
+  "description": "ChatBot Expo App",
+  "slug": "ChatBot-Expo-App",
   "privacy": "unlisted",
   "expo": {
     "sdkVersion": "26.0.0",

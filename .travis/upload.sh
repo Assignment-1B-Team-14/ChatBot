@@ -1,5 +1,7 @@
 ##### PREPARE #####
 if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then exit; fi
+
+if [ "$TRAVIS_BRANCH" != "master" ]; then exit; fi
 sudo chmod 777 -R $HOME
 
 ##### Create Output Folders #####
@@ -8,11 +10,14 @@ case $TYPE in
 	ANDROID)
     mkdir builds/Android-App
 		;;
-	WEB)
-    mkdir builds/Web-Page
-		;;
 	IOS)
     mkdir builds/iOS-App
+		;;
+	MOBILE_SIMPLE)
+    mkdir builds/Mobile-Simple
+		;;
+	WEB)
+    mkdir builds/Web-Page
 		;;
 	BACKEND)
     mkdir builds/Backend-Server
@@ -33,6 +38,10 @@ case $TYPE in
 	IOS)
     touch $HOME/builds/iOS-App/note.txt
     echo "No iOS App Present!!!" > $HOME/builds/iOS-App/note.txt
+		;;
+	MOBILE_SIMPLE)
+    touch $HOME/builds/Mobile-Simple/note.txt
+    echo "Expo Link gets live deployed to Expo.io (https://expo.io/@fwidder/chatbot-expo-app)" > $HOME/builds/Mobile-Simple/note.txt
 		;;
 	BACKEND)
     cp -fr $TRAVIS_BUILD_DIR/code/backend/target/*.jar $HOME/builds/Backend-Server
@@ -58,6 +67,9 @@ case $TYPE in
 		;;
 	IOS)
 		rm -rf $HOME/master/build/iOS-App
+		;;
+	MOBILE_SIMPLE)
+		rm -rf $HOME/master/build/Mobile-Simple
 		;;
 	BACKEND)
 		rm -rf $HOME/master/build/Backend-Server

@@ -29,6 +29,26 @@ matrix:
         - npm test
         - npm run build
 
+    # Mobile-Simple
+    - language: node_js
+      sudo: required
+      node_js:
+        - "node"
+        - "8"
+      env:
+          - TYPE=MOBILE_SIMPLE
+      before_script:
+        - cd code/frontend/mobile-simple
+      script:
+        - npm install
+        - npm test
+        - exp login -u $EXP_USERNAME -p $EXP_PASSWORD
+        - exp publish --non-interactive
+
+############################################################
+# BEGIN Not needed while just working with "mobile-simple" #
+############################################################
+
     # Mobile Android
     - language: android
       sudo: required
@@ -66,10 +86,14 @@ matrix:
      ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
      #######################################
      #######################################
-     
+
+##########################################################
+# END Not needed while just working with "mobile-simple" #
+##########################################################
+
 after_success:
-  - chmod +x $TRAVIS_BUILD_DIR/travis/upload.sh
-  - cd $TRAVIS_BUILD_DIR/travis/
+  - chmod +x $TRAVIS_BUILD_DIR/.travis/upload.sh
+  - cd $TRAVIS_BUILD_DIR/.travis/
   - ./upload.sh
 
 before_cache:
@@ -80,8 +104,9 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
-  - code/frontend/mobile/node_modules
-  - code/frontend/web/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/mobile/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/mobile-simple/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/web/node_modules
   - $HOME/.gradle/
   - $HOME/.android/build-cache
 

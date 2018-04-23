@@ -46,43 +46,43 @@ matrix:
 #################################################
 # Not needed while working with "mobile-simple" #
 #################################################
-#    # Mobile Android
-#    - language: android
-#      sudo: required
-#      env:
-#          - TYPE=ANDROID
-#      before_script:
-#        - cd code/frontend/mobile
-#        - nvm install 8
-#      node_js: 8
-#      android:
-#        components:
-#          - build-tools-23.0.1
-#          - android-23
-#          - extra-android-m2repository
-#          - extra-google-google_play_services
-#          - extra-google-m2repository
-#          - addon-google_apis-google-16
-#      script:
-#        - npm install
-#        - cd android && ./gradlew assembleRelease
-#
-#    # Mobile iOS
-#    - language: objective-c
-#      os: osx
-#      osx_image: xcode8.3
-#      node_js: 8
-#      env: TYPE=IOS
-#      before_script:
-#        - cd code/frontend/mobile
-#
-#     #######################################
-#     #######################################
-#     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
-#     ### !!! TODO: iOS Build Skript  !!! ###
-#     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
-#     #######################################
-#     #######################################
+    # Mobile Android
+    - language: android
+      sudo: required
+      env:
+          - TYPE=ANDROID
+      before_script:
+        - cd code/frontend/mobile
+        - nvm install 8
+      node_js: 8
+      android:
+        components:
+          - build-tools-23.0.1
+          - android-23
+          - extra-android-m2repository
+          - extra-google-google_play_services
+          - extra-google-m2repository
+          - addon-google_apis-google-16
+      script:
+        - npm install
+        - cd android && ./gradlew assembleRelease
+
+    # Mobile iOS
+    - language: objective-c
+      os: osx
+      osx_image: xcode8.3
+      node_js: 8
+      env: TYPE=IOS
+      before_script:
+        - cd code/frontend/mobile
+
+     #######################################
+     #######################################
+     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
+     ### !!! TODO: iOS Build Skript  !!! ###
+     ### !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ###
+     #######################################
+     #######################################
 
 after_success:
   - chmod +x $TRAVIS_BUILD_DIR/.travis/upload.sh

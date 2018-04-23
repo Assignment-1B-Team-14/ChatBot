@@ -42,7 +42,9 @@ matrix:
       script:
         - npm install
         - npm test
-        - npm run appr
+        - sudo npm install exp --global
+        - exp login -u $EXP_USERNAME -p $EXP_PASSWORD
+        - exp publish --non-interactive
 
 ############################################################
 # BEGIN Not needed while just working with "mobile-simple" #

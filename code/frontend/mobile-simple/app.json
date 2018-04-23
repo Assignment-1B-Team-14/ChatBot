@@ -3,7 +3,7 @@
   "displayName": "ChatBot Expo App",
   "privacy": "unlisted",
   "expo": {
-    "sdkVersion": "25.0.0",
+    "sdkVersion": "26.0.0",
     "orientation": "portrait",
     "primaryColor": "#000000",
     "androidStatusBarColor": "#000000",

@@ -98,9 +98,7 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
-  - code/frontend/mobile/node_modules
-  - code/frontend/web/node_modules
-  - code/frontend/mobile-simple/node_modules
+  - */node_modules
   - $HOME/.gradle/
   - $HOME/.android/build-cache
 #

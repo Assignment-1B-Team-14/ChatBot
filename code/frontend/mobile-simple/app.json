@@ -1,5 +1,32 @@
 {
+  "name": "ChatBot Mobile-Simple",
+  "displayName": "ChatBot Expo App",
+  "description": "ChatBot Expo App",
+  "slug": "chatbot-mobile-expo",
+  "privacy": "unlisted",
   "expo": {
-    "sdkVersion": "26.0.0"
+    "sdkVersion": "26.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#000000",
+    "androidStatusBarColor": "#000000",
+    "loading": {
+      "hideExponentText": true
+    },
+    "notification": {
+      "color": "#000000",
+      "androidMode": "default"
+    },
+    "ios": {
+      "splash": {
+        "backgroundColor": "#000000",
+        "resizeMode": "cover"
+      }
+    },
+    "android": {
+      "splash": {
+        "backgroundColor": "#000000",
+        "resizeMode": "cover"
+      }
+    }
   }
 }

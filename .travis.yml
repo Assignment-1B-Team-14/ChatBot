@@ -42,10 +42,13 @@ matrix:
       script:
         - npm install
         - npm test
+        - exp login -u $EXP_USERNAME -p $EXP_PASSWORD
+        - exp publish --non-interactive
 
-#################################################
-# Not needed while working with "mobile-simple" #
-#################################################
+############################################################
+# BEGIN Not needed while just working with "mobile-simple" #
+############################################################
+
     # Mobile Android
     - language: android
       sudo: required
@@ -84,6 +87,10 @@ matrix:
      #######################################
      #######################################
 
+##########################################################
+# END Not needed while just working with "mobile-simple" #
+##########################################################
+
 after_success:
   - chmod +x $TRAVIS_BUILD_DIR/.travis/upload.sh
   - cd $TRAVIS_BUILD_DIR/.travis/
@@ -97,8 +104,9 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
-  - code/frontend/mobile/node_modules
-  - code/frontend/web/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/mobile/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/mobile-simple/node_modules
+  - $TRAVIS_BUILD_DIR/code/frontend/web/node_modules
   - $HOME/.gradle/
   - $HOME/.android/build-cache
 

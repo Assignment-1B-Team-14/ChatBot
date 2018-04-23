@@ -13,7 +13,7 @@ case $TYPE in
 	IOS)
     mkdir builds/iOS-App
 		;;
-	MOBILE_EXPO)
+	MOBILE_SIMPLE)
     mkdir builds/Mobile-Simple
 		;;
 	WEB)

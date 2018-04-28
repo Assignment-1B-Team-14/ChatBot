@@ -17,12 +17,14 @@
       "androidMode": "default"
     },
     "ios": {
+      "bundleIdentifier": "com.team14.chatbot",
       "splash": {
         "backgroundColor": "#000000",
         "resizeMode": "cover"
       }
     },
     "android": {
+      "package": "com.team14.chatbot",
       "splash": {
         "backgroundColor": "#000000",
         "resizeMode": "cover"

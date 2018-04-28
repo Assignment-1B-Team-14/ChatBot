@@ -4,8 +4,14 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+<<<<<<< HEAD
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+=======
+    "bootstrap": "^4.1.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+>>>>>>> f60ca410f6780682470860c08c05a15e95b7815c
     "react-scripts": "1.1.4",
     "reactstrap": "^5.0.0",
     "ts-react-json-table": "^0.1.1"

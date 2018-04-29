@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import { Button, Input, Row } from 'reactstrap';
-=======
 import { Container, Row, Col } from 'reactstrap';
-
->>>>>>> f60ca410f6780682470860c08c05a15e95b7815c
 import './App.css';
 import dataInit from './demodata.json';
 import JsonTable from 'ts-react-json-table';
@@ -62,7 +58,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-<<<<<<< HEAD
         <Row>
           <h1>Demo Page</h1>
         </Row>
@@ -95,7 +90,6 @@ class App extends Component {
             this.messagesEnd = el;
           }}
         />
-=======
         <Container>
       <Col  xs="10" />
           <Col>
@@ -103,7 +97,6 @@ class App extends Component {
           </Col>
         <Col  />
       </Container>
->>>>>>> f60ca410f6780682470860c08c05a15e95b7815c
       </div>
     );
   }

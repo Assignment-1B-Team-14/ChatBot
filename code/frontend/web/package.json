@@ -2,7 +2,7 @@
 {
   "name": "chat-bot-frontend-web",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
 <<<<<<< HEAD
     "react": "^16.3.2",

@@ -1,10 +1,10 @@
 {
-  "name": "ChatBot-Expo-App",
+  "name": "react-native-demo-app",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "jest-expo": "26.0.0",
     "react-native-scripts": "1.13.2",
+    "jest-expo": "26.0.0",
     "react-test-renderer": "16.3.0-alpha.1"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -13,14 +13,12 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest",
-    "appr": "appr"
+    "test": "jest"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "exp": "^53.0.0",
     "expo": "^26.0.0",
     "react": "16.3.0",
     "react-native": "~0.54.1"

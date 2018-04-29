@@ -40,6 +40,7 @@ matrix:
       before_script:
         - cd code/frontend/mobile-simple
       script:
+        - npm i -g exp
         - npm install
 #        - npm test
         - exp login -u $EXP_USERNAME -p $EXP_PASSWORD

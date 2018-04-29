@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Input, Row } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
 import './App.css';
 import dataInit from './demodata.json';
 import JsonTable from 'ts-react-json-table';

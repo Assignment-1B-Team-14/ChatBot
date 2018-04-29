@@ -89,13 +89,6 @@ class App extends Component {
             this.messagesEnd = el;
           }}
         />
-        <Container>
-      <Col  xs="10" />
-          <Col>
-            Text
-          </Col>
-        <Col  />
-      </Container>
       </div>
     );
   }

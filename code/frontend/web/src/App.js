@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Button, Input, Row } from 'reactstrap';
-import './App.css';
-import dataInit from './demodata.json';
-import JsonTable from 'ts-react-json-table';
+import React, { Component } from "react";
+import { Button, Input, Row } from "reactstrap";
+import "./App.css";
+import dataInit from "./demodata.json";
+import JsonTable from "ts-react-json-table";
 
 class App extends Component {
   constructor(props) {
@@ -10,16 +10,16 @@ class App extends Component {
     this.sendMessage = this.sendMessage.bind(this);
     this.state = {
       data: dataInit,
-      inputText: '',
+      inputText: "",
       col: [
-        { key: 'sender', label: 'Sender:' },
+        { key: "sender", label: "Sender:" },
         {
-          key: 'receiver',
-          label: 'Receiver:'
+          key: "receiver",
+          label: "Receiver:"
         },
         {
-          key: 'message',
-          label: 'Message:'
+          key: "message",
+          label: "Message:"
         }
       ]
     };
@@ -28,16 +28,16 @@ class App extends Component {
   sendMessage() {
     const tmp = this.state.data;
     tmp.push({
-      sender: 'ONE',
-      receiver: 'TWO',
+      sender: "ONE",
+      receiver: "TWO",
       message: this.state.inputText
     });
     this.setState({ data: tmp });
-    this.setState({ inputText: '' });
+    this.setState({ inputText: "" });
   }
 
   scrollToBottom = () => {
-    this.messagesEnd.scrollIntoView({ behavior: 'smooth' });
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
   };
 
   componentDidMount() {
@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div className="App">
         <Row>
-          <h1>Demo Page</h1>
+          <h1>SuperBot</h1>
         </Row>
         <Row>
           <JsonTable
@@ -74,7 +74,7 @@ class App extends Component {
             value={this.state.inputText}
             onChange={evt => this.updateInputValue(evt)}
             onKeyPress={event => {
-              if (event.key === 'Enter') {
+              if (event.key === "Enter") {
                 this.sendMessage();
               }
             }}
@@ -84,7 +84,7 @@ class App extends Component {
           </Button>
         </Row>
         <div
-          style={{ float: 'left', clear: 'both' }}
+          style={{ float: "left", clear: "both" }}
           ref={el => {
             this.messagesEnd = el;
           }}

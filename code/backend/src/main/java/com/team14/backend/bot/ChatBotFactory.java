@@ -1,10 +1,14 @@
 package com.team14.backend.bot;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.alicebot.ab.Bot;
 import org.alicebot.ab.Chat;
 import org.alicebot.ab.MagicBooleans;
+import org.springframework.core.io.ClassPathResource;
+
+import com.team14.backend.ChatBotBackendApplication;
 
 public class ChatBotFactory {
 	private static ChatBotFactory me;
@@ -12,7 +16,12 @@ public class ChatBotFactory {
 	private Bot bot;
 
 	private ChatBotFactory() {
-		init();
+		try {
+			init();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public static void startUp() {
@@ -26,16 +35,17 @@ public class ChatBotFactory {
 		return getInstance();
 	}
 
-	private static String getResourcesPath() {
-		File currDir = new File(".");
-		String path = currDir.getAbsolutePath();
-		path = path.substring(0, path.length() - 2);
-		System.out.println(path);
-		String resourcesPath = path + File.separator + "src" + File.separator + "main" + File.separator + "resources";
-		return resourcesPath;
+	private String getResourcesPath() throws IOException {
+		File folder;
+		if (ChatBotBackendApplication.path == null) {
+			folder = new ClassPathResource("bots").getFile().getParentFile();
+		} else {
+			folder = new File(ChatBotBackendApplication.path).getParentFile();
+		}
+		return folder.toURI().getPath();
 	}
 
-	private void init() {
+	private void init() throws IOException {
 		String resourcesPath = getResourcesPath();
 		System.out.println(resourcesPath);
 		MagicBooleans.trace_mode = false;

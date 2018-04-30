@@ -10,13 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.team14.backend.model.AIChat;
+import com.team14.backend.model.ResponseWrapper;
+import com.team14.backend.model.Returncodes;
 
 @RestController
 public class ChatControler {
-	@RequestMapping(value = "/tools/sessionid", method = RequestMethod.GET, produces = "application/json")
-	public String getSession(HttpSession session) {
-		return session.getId();
-	}
 
 	private static HashMap<String, AIChat> chats = new HashMap<>();
 
@@ -25,15 +23,16 @@ public class ChatControler {
 	}
 
 	@RequestMapping(value = "/chat", method = RequestMethod.PUT, produces = "application/json")
-	public static void createChat(HttpSession session) {
+	public static ResponseWrapper createChat(HttpSession session) {
 		chats.put(session.getId(), new AIChat());
+		return new ResponseWrapper(chats.get(session.getId()), Returncodes.OKAY);
 	}
 
 	@RequestMapping(value = "/chat", method = RequestMethod.GET, produces = "application/json")
-	public static AIChat getMessages(HttpSession session, @RequestParam("message") String message) {
+	public static ResponseWrapper getMessages(HttpSession session, @RequestParam("message") String message) {
 		if (!chatExists(session.getId()) && (message != null))
-			return null;
+			return new ResponseWrapper(Returncodes.CHAT_NOT_FOUND);
 		chats.get(session.getId()).newMessage(message);
-		return chats.get(session.getId());
+		return new ResponseWrapper(chats.get(session.getId()), Returncodes.OKAY);
 	}
 }

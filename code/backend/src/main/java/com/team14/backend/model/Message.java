@@ -1,6 +1,13 @@
 package com.team14.backend.model;
 
-public class Message {
+import java.io.Serializable;
+
+public class Message implements Serializable {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 6357021668320830547L;
+
 	public Message(String question, String answer) {
 		super();
 		this.question = question;

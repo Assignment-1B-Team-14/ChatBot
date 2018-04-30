@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: personality.aiml -->
 <!-- Author: Dr. Richard S. Wallace -->
-<!-- Last modified: April 29, 2018 -->
+<!-- Last modified: April 30, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the SUPER 0.0.4 chat bot knowledge base. -->
 <!--  -->
@@ -1102,6 +1102,13 @@ By "we" do you mean you and me?</li>
 <li>I enjoy watching movies.</li>
 <li>I enjoy just listening to your questions.</li>
 <li>What would you <star/>?</li>
+</random></template>
+</category>
+category><pattern>WHAT * FAVORITE * ACTIVITY * </pattern>
+<template><random>
+<li>I love to watch Netflix.</li>
+<li>I really like programming.</li>
+<li>I like going on adventures.</li>
 </random></template>
 </category>
 <category><pattern>WHAT DO YOU KNOW</pattern>

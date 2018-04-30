@@ -6,7 +6,12 @@ import org.alicebot.ab.Chat;
 
 import com.team14.backend.bot.ChatBotFactory;
 
-public class AIChat {
+public class AIChat extends AbstarctResponse {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 5194613425228218678L;
+
 	public AIChat() {
 		chatSession = ChatBotFactory.getChat();
 		messages = new ArrayList<>();

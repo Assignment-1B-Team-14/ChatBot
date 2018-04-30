@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   StyleSheet,
   Text,
@@ -7,11 +7,9 @@ import {
   TextInput,
   KeyboardAvoidingView,
   Alert,
-  TouchableHighlight,
   Button,
   Keyboard
-} from 'react-native';
-import dataInit from './demodata.json';
+} from "react-native";
 
 {
   /* Constant for rendering ListView */
@@ -20,29 +18,56 @@ const ds = new ListView.DataSource({
   rowHasChanged: (r1, r2) => r1 !== r2
 });
 
+const backendURL = "http://h2717202.stratoserver.net:14000";
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.sendMessage = this.sendMessage.bind(this);
+    this.getMessage = this.getMessage.bind(this);
     this.state = {
-      data: dataInit,
-      dataSource: ds.cloneWithRows(dataInit),
-      inputText: ''
+      data: [],
+      dataSource: ds.cloneWithRows([{ question: "", answer: "" }]),
+      inputText: ""
     };
   }
 
+  async fetchAsyncJSON(url, requestType) {
+    try {
+      let response = await fetch(url, {
+        credentials: "same-origin",
+        method: requestType
+      });
+      console.log(response);
+      let data = await response.json();
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async getMessage(message) {
+    await this.fetchAsyncJSON(
+      backendURL + "/chat?message=" + message,
+      "GET"
+    ).then(response =>
+      this.setState({
+        dataSource: ds.cloneWithRows(response.response.messages)
+      })
+    );
+  }
+
+  async putChat() {
+    await this.fetchAsyncJSON(backendURL + "/chat", "PUT");
+  }
+
+  componentDidMount() {
+    this.putChat();
+  }
+
   sendMessage() {
-    const tmp = this.state.data;
-    tmp.push({
-      sender: 'ONE',
-      receiver: 'TWO',
-      message: this.state.inputText
-    });
-    this.setState({ data: tmp });
-    this.setState({
-      dataSource: ds.cloneWithRows(this.state.data)
-    });
-    this.setState({ inputText: '' });
+    this.getMessage(this.state.inputText);
+    this.setState({ inputText: "" });
     this.listView.scrollToEnd();
     Keyboard.dismiss();
   }
@@ -51,7 +76,7 @@ export default class App extends React.Component {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <View style={styles.header}>
-          <Text style={styles.head}>Demo App</Text>
+          <Text style={styles.head}>SuperBot</Text>
         </View>
         <View style={styles.content}>
           <ListView
@@ -62,14 +87,9 @@ export default class App extends React.Component {
             renderRow={rowData => (
               <View>
                 <View style={styles.seperator} />
-                <TouchableHighlight
-                  onPress={() => {
-                    Alert.alert(rowData.sender, rowData.message);
-                  }}>
-                  <Text style={styles.row}>
-                    {rowData.sender} -> {rowData.reciever}: {rowData.message}
-                  </Text>
-                </TouchableHighlight>
+                <Text style={styles.row}>You: {rowData.question}</Text>
+                <View style={styles.seperator} />
+                <Text style={styles.row}>Bot: {rowData.answer}</Text>
                 <View style={styles.seperator} />
               </View>
             )}
@@ -94,12 +114,12 @@ export default class App extends React.Component {
   }
 }
 
-const Dimensions = require('Dimensions');
-const window = Dimensions.get('window');
+const Dimensions = require("Dimensions");
+const window = Dimensions.get("window");
 const styles = StyleSheet.create({
   sendButton: {
     flex: 2,
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 30
   },
   seperator: {
@@ -113,29 +133,29 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   head: {
-    textAlign: 'center',
-    color: 'black',
-    fontWeight: 'bold',
+    textAlign: "center",
+    color: "black",
+    fontWeight: "bold",
     fontSize: 45
   },
   container: {
     height: window.height,
     width: window.width,
-    backgroundColor: '#000',
-    justifyContent: 'space-between'
+    backgroundColor: "#000",
+    justifyContent: "space-between"
   },
   header: {
     flex: 3,
-    backgroundColor: 'lightgrey'
+    backgroundColor: "lightgrey"
   },
   content: {
     width: window.width,
     flex: 20,
-    backgroundColor: 'powderblue'
+    backgroundColor: "powderblue"
   },
   footer: {
     flex: 2,
-    backgroundColor: 'lightgrey',
-    flexDirection: 'row'
+    backgroundColor: "lightgrey",
+    flexDirection: "row"
   }
 });

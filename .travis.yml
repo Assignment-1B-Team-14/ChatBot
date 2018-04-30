@@ -11,6 +11,7 @@ matrix:
         - cd code/backend
       script:
         - sudo chmod +x mvnw
+        - ./mvnw install:install-file  install:install-file -Dfile=src/main/resources/lib/Ab.jar -DgroupId=code.google -DartifactId=Ab -Dversion=0.0.4.3 -Dpackaging=jar -DgeneratePom=true
         - ./mvnw test
         - ./mvnw install
 

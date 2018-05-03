@@ -9,6 +9,7 @@ import org.alicebot.ab.utils.IOUtils;
 import com.team14.backend.bot.ChatBotFactory;
 
 public class botest {
+	@SuppressWarnings("rawtypes")
 	public static void main(String... strings) {
 		Chat chatSession = ChatBotFactory.getChat();
 		String textLine = "";

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<category><pattern>BUILD</pattern>
+<template>Thu May 03 16:27:02 NZST 2018</template>
+</category>
+<category><pattern>DELEVLOPMENT ENVIRONMENT</pattern>
+<template>Program AB 0.0.4.3 beta -- AI Foundation Reference AIML 2.0 implementation</template>
+</category>
+</aiml>

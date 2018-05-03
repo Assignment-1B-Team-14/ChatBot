@@ -16,9 +16,9 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-/.mvn
-/node_and_yarn
-/mvnw
-/mvnw.cmd
-/bin
+.mvn
+node_and_yarn
+mvnw
+mvnw.cmd
+bin
 Thumbs.db

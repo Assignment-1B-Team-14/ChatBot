@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<!-- -->
+	<category>
+		<pattern>HI *</pattern>
+		<template>
+			<condition name="name">
+				<li value="unknown">
+					Hello! I'm Super-Bot. What is your name?
+
+				</li>
+				<li>
+					Hello
+					<get name="name" />
+					.
+				</li>
+			</condition>
+		</template>
+	</category>
+	<category>
+		<pattern>HI</pattern>
+		<template>
+			<condition name="name">
+				<li value="unknown">
+					Hello! I'm Super-Bot. What is your name?
+
+				</li>
+				<li>
+					Hello
+					<get name="name" />
+					.
+				</li>
+			</condition>
+		</template>
+	</category>
+	<category>
+		<pattern>HELLO</pattern>
+		<template>
+			<condition name="name">
+				<li value="unknown">
+					Hello! I'm Super-Bot. What is your name?
+
+				</li>
+				<li>
+					Hello
+					<get name="name" />
+					.
+				</li>
+			</condition>
+		</template>
+	</category>
+	<category>
+		<pattern>HELLO *</pattern>
+		<template>
+			<condition name="name">
+				<li value="unknown">
+					Hello! I'm Super-Bot. What is your name?
+
+				</li>
+				<li>
+					Hello
+					<get name="name" />
+					.
+				</li>
+			</condition>
+		</template>
+	</category>
+</aiml>

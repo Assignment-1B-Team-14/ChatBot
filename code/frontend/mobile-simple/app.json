@@ -1,6 +1,12 @@
 {
   "privacy": "public",
   "expo": {
-    "sdkVersion": "26.0.0"
+    "name": "super-bot",
+    "description": "SUPER-Bot Mobile App",
+    "slug": "super-bot",
+    "privacy": "public",
+    "sdkVersion": "26.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait"
   }
 }

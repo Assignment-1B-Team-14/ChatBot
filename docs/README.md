@@ -41,29 +41,41 @@ Git:
 sudo apt-get install git
 ```
 
-#### Installing
+### Windows
+
+#### Prerequisites
+
+In order to set up the project, some programms must first be installed.
+
+* Java SE Development Kit (JDK)
+
+* Node.js
+
+* Git
+
+### Installing
 
 A step by step series of examples that tell you how to get a development env running.
 
 Open a shell and enter the commands step by step.
 
-##### Step 1 - Download the code from Github
+#### Step 1 - Download the code from Github
 
-###### Download code using ssh:
+##### Download code using ssh:
 
 ```
 # clone Github repository
 git clone git@github.com:Assignment-1B-Team-14/ChatBot.git
 ```
 
-###### Download code using https:
+##### Download code using https:
 
 ```
 # clone Github repository
 git clone https://github.com/Assignment-1B-Team-14/ChatBot.git
 ```
 
-##### Step 2 - Compile and start the backend
+#### Step 2 - Compile and start the backend
 
 In this step we will build the backend and get it running locally.
 
@@ -71,7 +83,7 @@ In this step we will build the backend and get it running locally.
 # go to backend directory
 cd ChatBot/code/backend/
 # compile the code and build a runnable .jar file
-./ mvnw install
+./mvnw install
 # go to target directory
 cd target/
 java -jar main-0.0.1-SNAPSHOT.jar
@@ -79,7 +91,7 @@ java -jar main-0.0.1-SNAPSHOT.jar
 
 If no errors occurred the backend should be up and running on your local machine.
 
-##### Step 3 - Compile and start the frontend
+#### Step 3 - Compile and start the frontend
 
 To start the frontend, we have to open a second shell first.
 You can do this by pressing `CTRL+ALT+T`.
@@ -89,17 +101,17 @@ In the new shell, go to the root directory of the ChatBot project.
 cd /.../ChatBot/
 ```
 
-###### Start the mobile frontend in development mode:
+##### Start the mobile frontend in development mode:
 
 To start the mobile frontend we first have to switch to the correct folder. Then we start the application in development mode.
 
 ```
 # go to mobile directory
-cd code/frontend/mobile/
+cd code/frontend/mobile-simple/
 # download the dependencies
 npm install
 # run the mobile frontend in development mode
-npm start
+npm run start
 ```
 
 Yarn (if installed) can be used as an alternative to npm.
@@ -115,7 +127,7 @@ yarn start
 
 Now the server for the mobile frontend should run. To view the app, follow the instructions in the shell.
 
-###### Start the web frontend in development mode:
+##### Start the web frontend in development mode:
 
 To start the web frontend we first have to switch to the correct folder. Then we start the application in development mode.
 
@@ -125,7 +137,7 @@ cd code/frontend/web/
 # download the dependencies
 npm install
 # run the web frontend in development mode
-npm start
+npm run start
 ```
 
 Yarn (if installed) can be used as an alternative to npm.
@@ -146,6 +158,8 @@ localhost:3000
 ```
 
 The url and the port can be different. If given, read the data for your system in the shell and use these.
+
+---
 
 ## Built With
 
@@ -169,28 +183,24 @@ TravisCI
 Asana
 ```
 
----
-
 ### Technology Stack
 
 Three-Tier-System
 
-#### Database Tier:
+#### Backend Tier:
 
 ```
-MySql
+Security via Spring Security
+
+Spring Boot
 ```
 
 #### Bussiness Tier:
 
 ```
-Spring Boot
+Program AB AIML 2.0  (Artificial Intelligence Markup Language)
 
 RESTfull Service
-
-Security via Spring Security
-
-Database Acess with JPA and Spring Data
 ```
 
 #### Frontend Tier:
@@ -203,8 +213,8 @@ Desktop Devices:  React.js (Maybe with Electron)
 
 ---
 
-[Technology Stack:](https://github.com/Assignment-1B-Team-14/ChatBot/blob/master/docs/TechnologyStack.jpg)
-![Technology Stack](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/docs/TechnologyStack.jpg)
+[Technology Stack:](https://github.com/Assignment-1B-Team-14/ChatBot/blob/master/docs/TechnologyStack.png)
+![Technology Stack](https://raw.githubusercontent.com/Assignment-1B-Team-14/ChatBot/master/docs/TechnologyStack.png)
 
 ### Team Members
 

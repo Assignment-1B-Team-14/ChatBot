@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -9,7 +9,7 @@ import {
   Alert,
   Button,
   Keyboard
-} from "react-native";
+} from 'react-native';
 
 {
   /* Constant for rendering ListView */
@@ -18,7 +18,7 @@ const ds = new ListView.DataSource({
   rowHasChanged: (r1, r2) => r1 !== r2
 });
 
-const backendURL = "http://h2717202.stratoserver.net:14000";
+const backendURL = 'http://h2717202.stratoserver.net:14000';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -27,18 +27,17 @@ export default class App extends React.Component {
     this.getMessage = this.getMessage.bind(this);
     this.state = {
       data: [],
-      dataSource: ds.cloneWithRows([{ question: "", answer: "" }]),
-      inputText: ""
+      dataSource: ds.cloneWithRows([]),
+      inputText: ''
     };
   }
 
   async fetchAsyncJSON(url, requestType) {
     try {
       let response = await fetch(url, {
-        credentials: "same-origin",
+        credentials: 'same-origin',
         method: requestType
       });
-      console.log(response);
       let data = await response.json();
       return data;
     } catch (error) {
@@ -48,8 +47,8 @@ export default class App extends React.Component {
 
   async getMessage(message) {
     await this.fetchAsyncJSON(
-      backendURL + "/chat?message=" + message,
-      "GET"
+      backendURL + '/chat?message=' + message,
+      'GET'
     ).then(response =>
       this.setState({
         dataSource: ds.cloneWithRows(response.response.messages)
@@ -58,16 +57,17 @@ export default class App extends React.Component {
   }
 
   async putChat() {
-    await this.fetchAsyncJSON(backendURL + "/chat", "PUT");
+    await this.fetchAsyncJSON(backendURL + '/chat', 'PUT');
   }
 
-  componentDidMount() {
-    this.putChat();
+  async componentDidMount() {
+    await this.putChat();
+    await this.getMessage('Hi!');
   }
 
   sendMessage() {
     this.getMessage(this.state.inputText);
-    this.setState({ inputText: "" });
+    this.setState({ inputText: '' });
     this.listView.scrollToEnd();
     Keyboard.dismiss();
   }
@@ -83,6 +83,7 @@ export default class App extends React.Component {
             ref={listView => {
               this.listView = listView;
             }}
+            enableEmptySections={true}
             dataSource={this.state.dataSource}
             renderRow={rowData => (
               <View>
@@ -114,12 +115,12 @@ export default class App extends React.Component {
   }
 }
 
-const Dimensions = require("Dimensions");
-const window = Dimensions.get("window");
+const Dimensions = require('Dimensions');
+const window = Dimensions.get('window');
 const styles = StyleSheet.create({
   sendButton: {
     flex: 2,
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: 30
   },
   seperator: {
@@ -133,29 +134,29 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   head: {
-    textAlign: "center",
-    color: "black",
-    fontWeight: "bold",
+    textAlign: 'center',
+    color: 'black',
+    fontWeight: 'bold',
     fontSize: 45
   },
   container: {
     height: window.height,
     width: window.width,
-    backgroundColor: "#000",
-    justifyContent: "space-between"
+    backgroundColor: '#000',
+    justifyContent: 'space-between'
   },
   header: {
     flex: 3,
-    backgroundColor: "lightgrey"
+    backgroundColor: 'lightgrey'
   },
   content: {
     width: window.width,
     flex: 20,
-    backgroundColor: "powderblue"
+    backgroundColor: 'lightgrey'
   },
   footer: {
     flex: 2,
-    backgroundColor: "lightgrey",
-    flexDirection: "row"
+    backgroundColor: 'lightgrey',
+    flexDirection: 'row'
   }
 });

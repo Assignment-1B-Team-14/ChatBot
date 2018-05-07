@@ -3,6 +3,7 @@ package com.team14.backend.model;
 import java.util.ArrayList;
 
 import org.alicebot.ab.Chat;
+import org.jsoup.Jsoup;
 
 import com.team14.backend.bot.ChatBotFactory;
 
@@ -35,6 +36,8 @@ public class AIChat extends AbstarctResponse {
 
 	public void newMessage(String string) {
 		String ret = chatSession.multisentenceRespond(string);
+		// Remove HTML Tags
+		ret = Jsoup.parse(string).text();
 		messages.add(new Message(string, ret));
 	}
 }

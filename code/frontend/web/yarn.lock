@@ -5622,7 +5622,7 @@ react-transition-group@^2.2.1:
     loose-envify "^1.3.1"
     prop-types "^15.6.1"
 
-react@^16.2.0, react@^16.3.2:
+react@^16.3.2:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
   dependencies:
@@ -6632,12 +6632,6 @@ trim-newlines@^1.0.0:
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
-
-ts-react-json-table@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ts-react-json-table/-/ts-react-json-table-0.1.1.tgz#0a98bbf542bc9787608400fe894cbe39bab32ef3"
-  dependencies:
-    react "^16.2.0"
 
 tty-browserify@0.0.0:
   version "0.0.0"

@@ -1,48 +1,69 @@
-import React, { Component } from "react";
-import { Button, Input, Row } from "reactstrap";
-import "./App.css";
-import dataInit from "./demodata.json";
-import JsonTable from "ts-react-json-table";
+import React, { Component } from 'react';
+import { Button, Input, Row, Table } from 'reactstrap';
+import './App.css';
+
+const backendURL = 'http://super-bot.pizza:14000';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.sendMessage = this.sendMessage.bind(this);
     this.state = {
-      data: dataInit,
-      inputText: "",
-      col: [
-        { key: "sender", label: "Sender:" },
-        {
-          key: "receiver",
-          label: "Receiver:"
-        },
-        {
-          key: "message",
-          label: "Message:"
-        }
-      ]
+      data: [],
+      inputText: '',
+      col: []
     };
   }
 
+  async fetchAsyncJSON(url, requestType) {
+    try {
+      let response = await fetch(url, {
+        method: requestType
+      });
+      let data = await response.json();
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async getMessage(message) {
+    try {
+      await this.fetchAsyncJSON(
+        backendURL + '/chat?message=' + message,
+        'GET'
+      ).then(response =>
+        this.setState({
+          data: response.response.messages
+        })
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async putChat() {
+    await this.fetchAsyncJSON(backendURL + '/createChat', 'GET');
+  }
+
+  async componentDidMount() {
+    console.log('get Chat');
+    await this.putChat();
+    console.log('get message');
+    await this.getMessage('Hi!');
+
+    console.log('Date');
+    console.log(this.state);
+  }
+
   sendMessage() {
-    const tmp = this.state.data;
-    tmp.push({
-      sender: "ONE",
-      receiver: "TWO",
-      message: this.state.inputText
-    });
-    this.setState({ data: tmp });
-    this.setState({ inputText: "" });
+    this.getMessage(this.state.inputText);
+    this.setState({ inputText: '' });
   }
 
   scrollToBottom = () => {
-    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+    this.messagesEnd.scrollIntoView({ behavior: 'smooth' });
   };
-
-  componentDidMount() {
-    this.scrollToBottom();
-  }
 
   componentDidUpdate() {
     this.scrollToBottom();
@@ -61,12 +82,21 @@ class App extends Component {
           <h1>SuperBot</h1>
         </Row>
         <Row>
-          <JsonTable
-            className="App"
-            caption="Messages:"
-            rows={this.state.data}
-            columns={this.state.col}
-          />
+          <Table>
+            <tbody>
+              {this.state.data.map(function(data, index) {
+                return (
+                  <tr>
+                    <th>
+                      <p>You: {data.request}</p>
+                      <br />
+                      <p>Bot: {data.response}</p>
+                    </th>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </Table>
         </Row>
         <Row>
           <Input
@@ -74,7 +104,7 @@ class App extends Component {
             value={this.state.inputText}
             onChange={evt => this.updateInputValue(evt)}
             onKeyPress={event => {
-              if (event.key === "Enter") {
+              if (event.key === 'Enter') {
                 this.sendMessage();
               }
             }}
@@ -84,7 +114,7 @@ class App extends Component {
           </Button>
         </Row>
         <div
-          style={{ float: "left", clear: "both" }}
+          style={{ clear: 'both' }}
           ref={el => {
             this.messagesEnd = el;
           }}

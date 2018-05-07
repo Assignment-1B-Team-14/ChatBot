@@ -18,7 +18,7 @@ const ds = new ListView.DataSource({
   rowHasChanged: (r1, r2) => r1 !== r2
 });
 
-const backendURL = 'http://h2717202.stratoserver.net:14000';
+const backendURL = 'http://super-bot.pizza:14000';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -57,7 +57,7 @@ export default class App extends React.Component {
   }
 
   async putChat() {
-    await this.fetchAsyncJSON(backendURL + '/chat', 'PUT');
+    await this.fetchAsyncJSON(backendURL + '/createChat', 'GET');
   }
 
   async componentDidMount() {

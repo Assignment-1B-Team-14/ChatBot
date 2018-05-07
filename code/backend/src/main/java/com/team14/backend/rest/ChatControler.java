@@ -22,7 +22,7 @@ public class ChatControler {
 		return chats.containsKey(sessionId);
 	}
 
-	@RequestMapping(value = "/chat", method = RequestMethod.PUT, produces = "application/json")
+	@RequestMapping(value = "/createChat", method = RequestMethod.GET, produces = "application/json")
 	public static ResponseWrapper createChat(HttpSession session) {
 		chats.put(session.getId(), new AIChat());
 		return new ResponseWrapper(chats.get(session.getId()), Returncodes.OKAY);

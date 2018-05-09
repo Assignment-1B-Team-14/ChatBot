@@ -10,7 +10,6 @@ import {
   Button,
   Keyboard
 } from 'react-native';
-import Cookie from 'react-native-cookie';
 
 {
   /* Constant for rendering ListView */

@@ -10,6 +10,7 @@ import {
   Button,
   Keyboard
 } from 'react-native';
+import Cookie from 'react-native-cookie';
 
 {
   /* Constant for rendering ListView */
@@ -41,6 +42,7 @@ export default class App extends React.Component {
       let data = await response.json();
       return data;
     } catch (error) {
+      Alert.alert('Error', 'Network Error! Cant access Server.');
       console.error(error);
     }
   }
@@ -62,7 +64,6 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     await this.putChat();
-    await this.getMessage('Hi!');
   }
 
   sendMessage() {
@@ -120,7 +121,6 @@ const window = Dimensions.get('window');
 const styles = StyleSheet.create({
   sendButton: {
     flex: 2,
-    textAlign: 'center',
     fontSize: 30
   },
   seperator: {

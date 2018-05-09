@@ -37,7 +37,7 @@ public class AIChat extends AbstarctResponse {
 	public void newMessage(String string) {
 		String ret = chatSession.multisentenceRespond(string);
 		// Remove HTML Tags
-		ret = Jsoup.parse(string).text();
+		ret = Jsoup.parse(ret).text();
 		messages.add(new Message(string, ret));
 	}
 }

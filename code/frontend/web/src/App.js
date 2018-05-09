@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Input, Row, Table } from 'reactstrap';
+import { Button, Input, Row } from 'reactstrap';
 import './App.css';
 
 const backendURL = 'http://super-bot.pizza:14000';
@@ -18,6 +18,7 @@ class App extends Component {
   async fetchAsyncJSON(url, requestType) {
     try {
       let response = await fetch(url, {
+        credentials: 'include',
         method: requestType
       });
       let data = await response.json();
@@ -47,13 +48,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    console.log('get Chat');
     await this.putChat();
-    console.log('get message');
-    await this.getMessage('Hi!');
-
-    console.log('Date');
-    console.log(this.state);
   }
 
   sendMessage() {
@@ -82,21 +77,14 @@ class App extends Component {
           <h1>SuperBot</h1>
         </Row>
         <Row>
-          <Table>
-            <tbody>
-              {this.state.data.map(function(data, index) {
-                return (
-                  <tr>
-                    <th>
-                      <p>You: {data.request}</p>
-                      <br />
-                      <p>Bot: {data.response}</p>
-                    </th>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </Table>
+          {this.state.data.map(function(data, index) {
+            return (
+              <div>
+                <p>You: {data.question}</p>
+                <p>Bot: {data.answer}</p>
+              </div>
+            );
+          })}
         </Row>
         <Row>
           <Input

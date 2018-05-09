@@ -1,1 +1,0 @@
-Expo Link gets live deployed to Expo.io (https://expo.io/@fwidder/chatbot-expo-app)

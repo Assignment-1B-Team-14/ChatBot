@@ -88,9 +88,9 @@ export default class App extends React.Component {
             renderRow={rowData => (
               <View>
                 <View style={styles.seperator} />
-                <Text style={styles.row}>You: {rowData.question}</Text>
+                <Text style={styles.questionRow}>You: {rowData.question}</Text>
                 <View style={styles.seperator} />
-                <Text style={styles.row}>Bot: {rowData.answer}</Text>
+                <Text style={styles.answerRow}>Bot: {rowData.answer}</Text>
                 <View style={styles.seperator} />
               </View>
             )}
@@ -122,36 +122,41 @@ const styles = StyleSheet.create({
     flex: 2,
     fontSize: 30
   },
+questionRow:{
+  textAlign:'right',
+  fontSize: 25,
+},
   seperator: {
-    height: 10
+    height: 10,
   },
-  row: {
-    fontSize: 30
+  answerRow: {
+    fontSize: 25,
   },
   input: {
     flex: 5,
     fontSize: 20
   },
   head: {
+    paddingTop: 18,
     textAlign: 'center',
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 45
+    fontSize: 45,
+
   },
   container: {
     height: window.height,
     width: window.width,
-    backgroundColor: '#000',
+    backgroundColor: 'lightgrey',
     justifyContent: 'space-between'
   },
   header: {
-    flex: 3,
-    backgroundColor: 'lightgrey'
+    flex: 4,
+
   },
   content: {
     width: window.width,
     flex: 20,
-    backgroundColor: 'lightgrey'
   },
   footer: {
     flex: 2,

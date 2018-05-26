@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8"?>
+   <category>
+      <pattern>BIOSTATISTICIAN</pattern>
+      <template>The papers required for a biostatistician job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>BUSINESS ANALYST</pattern>
+      <template>The papers required for a business analyst job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>QUALITY ANALYST</pattern>
+      <template>The papers required for a quality analyst job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>STATISTICAL ANALYST</pattern>
+      <template>The papers required for a Statistical analyst job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>GOVERNMENT STATISTICIAN</pattern>
+      <template>The papers required for a Government statistician job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>INDUSTRIAL FORECASTER</pattern>
+      <template>The papers required for a industrial forecaster job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>LOGISTICS ANALYST</pattern>
+      <template>The papers required for a Logistics analyst job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>SECONDARY TEACHER</pattern>
+      <template>The papers required for a secondary teacher job are: Probability Industrial and Business Analytics Statistical Methods Applied Stochastic Models Forecasting OR Logical Database Design Data Mining and Knowledge Engineering OR Statistical Computing with SAS</template>
+   </category>
+   <category>
+      <pattern>DATA ANALYST</pattern>
+      <template>The papers required for a data analyst job are: Foundations of Information Science Data Mining and Knowledge Engineering Statistical Methods Artificial Intelligence Data Structures and Algorithms OR Physical Database Design Text and Vision Intelligence OR Nature Inspired Computing</template>
+   </category>
+   <category>
+      <pattern>INFORMATION ANALYST AND DESIGNER</pattern>
+      <template>The papers required for a information analyst and designer job are: Foundations of Information Science Data Mining and Knowledge Engineering Statistical Methods Artificial Intelligence Data Structures and Algorithms OR Physical Database Design Text and Vision Intelligence OR Nature Inspired Computing</template>
+   </category>
+   <category>
+      <pattern>IS SERVICES CONSULTANT</pattern>
+      <template>The papers required for a is services job are: Foundations of Information Science Data Mining and Knowledge Engineering Statistical Methods Artificial Intelligence Data Structures and Algorithms OR Physical Database Design Text and Vision Intelligence OR Nature Inspired Computing</template>
+   </category>
+   <category>
+      <pattern>IT SUPERVISOR</pattern>
+      <template>The papers required for a it supervisor are: Foundations of Information Science Data Mining and Knowledge Engineering Statistical Methods Artificial Intelligence Data Structures and Algorithms OR Physical Database Design Text and Vision Intelligence OR Nature Inspired Computing</template>
+   </category>
+   <category>
+      <pattern>TECHNICAL ANALYST</pattern>
+      <template>The papers required for a technical analyst job are: Foundations of Information Science Data Mining and Knowledge Engineering Statistical Methods Artificial Intelligence Data Structures and Algorithms OR Physical Database Design Text and Vision Intelligence OR Nature Inspired Computing</template>
+   </category>
+   <category>
+      <pattern>PROJECT LEADER</pattern>
+      <template>The papers required for a project leader are: Foundations of Information Science Data Mining and Knowledge Engineering Statistical Methods Artificial Intelligence Data Structures and Algorithms OR Physical Database Design Text and Vision Intelligence OR Nature Inspired Computing</template>
+   </category>
+   <category>
+      <pattern>ENTREPRENEUR</pattern>
+      <template>The papers required for being a entrepreneur are: Data Structures and Algorithms Theory of Computation Algorithm Design and Analysis Programming Languages Operating Systems OR Logic and Discrete Structures Artificial Intelligence OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>INDUSTRIAL RESEARCHER</pattern>
+      <template>The papers required for being a industrial researcher are: Data Structures and Algorithms Theory of Computation Algorithm Design and Analysis Programming Languages Operating Systems OR Logic and Discrete Structures Artificial Intelligence OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>RESEARCH AND DEVELOPMENT MANAGER</pattern>
+      <template>The papers required for being a research and development manager are: Data Structures and Algorithms Theory of Computation Algorithm Design and Analysis Programming Languages Operating Systems OR Logic and Discrete Structures Artificial Intelligence OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SOFTWARE ARCHITECT</pattern>
+      <template>The papers required for being a software architect are: Data Structures and Algorithms Theory of Computation Algorithm Design and Analysis Programming Languages Operating Systems OR Logic and Discrete Structures Artificial Intelligence OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SOFTWARE DESIGNER</pattern>
+      <template>The papers required for being a software designer are: Data Structures and Algorithms Theory of Computation Algorithm Design and Analysis Programming Languages Operating Systems OR Logic and Discrete Structures Artificial Intelligence OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>CALL CENTRE MANAGER</pattern>
+      <template>The papers required for being a call centre manager are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>DATABASE ADMINISTRATOR</pattern>
+      <template>The papers required for being a database administrator are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>IT SUPPORT ROLE</pattern>
+      <template>The papers required for being a it support are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>NETWORK ADMINISTRATOR</pattern>
+      <template>The papers required for being a network administrator are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>OUTSOURCED IT SERVICES COORDINATOR</pattern>
+      <template>The papers required for being a outsourced it services coordinator are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>SOLUTIONS ARCHITECT</pattern>
+      <template>The papers required for being a solutions architect are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>INTEGRATION AND FUNCTIONAL CONSULTANT</pattern>
+      <template>The papers required for being a integration and functional consultant are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>IS OPERATIONAL MANAGER</pattern>
+      <template>The papers required for being a outsourced it services coordinator are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>IT SERVICE SUPERVISOR</pattern>
+      <template>The papers required for being a it service supervisor are: IT Service Provision IT Strategy and Control Needs Analysis Acquisition and Training IT Service Management Network and System Administration OR Information Security Technologies Information Security Management OR Contemporary Information Systems</template>
+   </category>
+   <category>
+      <pattern>IT SECURITY ANALYST</pattern>
+      <template>The papers required for being a it security analyst are: Computer Network Applications Advanced Network Technologies Network System Administration Network Security Operating Systems OR Physical Database Design Information Security Management OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>NETWORK ANALYST</pattern>
+      <template>The papers required for being a network analyst are: Computer Network Applications Advanced Network Technologies Network System Administration Network Security Operating Systems OR Physical Database Design Information Security Management OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>NETWORK DESIGNER</pattern>
+      <template>The papers required for being a network designer are: Computer Network Applications Advanced Network Technologies Network System Administration Network Security Operating Systems OR Physical Database Design Information Security Management OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SYSTEM AND NETWORK ADMINISTRATOR</pattern>
+      <template>The papers required for being a system and network administrator are: Computer Network Applications Advanced Network Technologies Network System Administration Network Security Operating Systems OR Physical Database Design Information Security Management OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>COMPUTER PROGRAMMER</pattern>
+      <template>The papers required for being a computer programmer are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>MOBILE DEVELOPER</pattern>
+      <template>The papers required for being a mobile developer are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>APP DEVELOPER</pattern>
+      <template>The papers required for being a app developer are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SOFTWARE DEVELOPER</pattern>
+      <template>The papers required for being a software developer are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SOFTWARE ENGINEER</pattern>
+      <template>The papers required for being a software engineer are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SOFTWARE TESTER</pattern>
+      <template>The papers required for being a software tester are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SYSTEMS ANALYST</pattern>
+      <template>The papers required for being a systems analyst are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>SYSTEMS ARCHITECT</pattern>
+      <template>The papers required for being a systems architect are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>TECHNOLOGY CONSULTANT</pattern>
+      <template>The papers required for being a technology consultant are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>WEB DEVELOPER</pattern>
+      <template>The papers required for being a web developer are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>PROJECT MANAGER</pattern>
+      <template>The papers required for being a project manager are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
+   </category>
+   <category>
+      <pattern>What are the papers required for a * job</pattern>
+      <template>
+         <srai>
+            <star />
+         </srai>
+      </template>
+   </category>
+   <category>
+      <pattern>Can you tell me the papers required for a * job</pattern>
+      <template>
+         <srai>
+            <star />
+         </srai>
+      </template>
+   </category>
+</aiml>

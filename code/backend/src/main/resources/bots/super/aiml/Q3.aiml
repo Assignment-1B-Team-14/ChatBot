@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version = "1.0.1" encoding = "UTF-8"?>
+   <category>
+      <pattern> MAJOR FOR software development major 
+	  </pattern>
+	  
+      <template>The papers required for sofware development major are: Program Design and Construction 
+				Software Engineering 
+				Software Development Practice 
+				Applied Human Computer Interaction 
+				Operating Systems OR Physical Database Design 
+				Web Development OR Distributed and Mobile Systems
+	  </template>
+   </category>
+   
+   <category>
+      <pattern>What are the papers required for *
+	  </pattern>
+      <template>
+         <srai>MAJOR FOR <star/></srai>
+      </template>
+   </category>
+   
+   <category>
+      <pattern>Can you tell me the papers required for *
+	  </pattern>
+      <template>
+         <srai>MAJOR FOR <star/></srai>
+      </template>
+   </category>
+   
+   
+</aiml>

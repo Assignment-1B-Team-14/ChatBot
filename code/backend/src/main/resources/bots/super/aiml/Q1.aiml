@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8"?>
+  <!-- LEVEL 1 PAPERS -->
+   <category>
+      <pattern>REQ 720001</pattern>
+      <template>The paper Skills Workshop (720001) has no requisite papers.</template>
+   </category>
+   <!-- LEVEL 5 PAPERS -->
+   <category>
+      <pattern>REQ MATH502</pattern>
+      <template>The paper Algebra and Discrete Mathematics (MATH502) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ STAT500</pattern>
+      <template>The paper Applied Statistics (STAT500) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ ENEL504</pattern>
+      <template>The paper Computer Network Principles (ENEL504) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP504</pattern>
+      <template>The paper Computer Networking (COMP504) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP501</pattern>
+      <template>The paper Computing Technology in Society (COMP501) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ MATH501</pattern>
+      <template>The paper Differential and Integral Calculus (MATH501) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ INFS500</pattern>
+      <template>The paper Enterprise Systems (INFS500) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP502</pattern>
+      <template>The paper Foundations of IT Infrastructure (COMP502) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP505</pattern>
+      <template>The paper Introduction to Programming (COMP505) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ MATH500</pattern>
+      <template>The paper Mathematical Concepts (MATH500) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ ENSE502</pattern>
+      <template>The paper Object Oriented Applications (ENSE502) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP500</pattern>
+      <template>The paper Programming 1 (COMP500) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP503</pattern>
+      <template>The paper Programming 2 (COMP503) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ ENSE501</pattern>
+      <template>The paper Programming for Engineering Applications (ENSE501) has no requisite papers.</template>
+   </category>
+   <!-- LEVEL 6 PAPERS -->
+   <category>
+      <pattern>REQ COMP611</pattern>
+      <template> The paper Algorithm Design and Analysis (COMP611) has prerequisite papers: COMP610. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP612</pattern>
+      <template> The paper Computer Graphics Programming (COMP612) has prerequisite papers: MATH502 and any one of COMP603 or COMP610. </template>
+   </category>
+   <category>
+      <pattern>REQ ENEL611</pattern>
+      <template> The paper Computer Network Applications (ENEL611) has prerequisite papers: any one of COMP500 or ENEL504. </template>
+   </category>
+   <category>
+      <pattern>REQ INFS600</pattern>
+      <template>The paper Data and Process Modelling (INFS600) has prerequisite papers: any one of COMP500 or ENSE501. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP610</pattern>
+      <template>The paper Data Structures and Algorithms (COMP610) has prerequisite papers: MATH502 and any one of COMP503 or ENSE502. </template>
+   </category>
+   <category>
+      <pattern>REQ STAT603</pattern>
+      <template>The paper Forecasting (STAT603) has prerequisite papers: STAT500. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP606</pattern>
+      <template>The paper Foundations of Information Science (COMP606) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP607</pattern>
+      <template>The paper Information Security Technologies (COMP607) has prerequisite papers: ENEL504. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP600</pattern>
+      <template>The paper IT Project Management (COMP600) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP601</pattern>
+      <template>The paper IT Service Provision (COMP601) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP613</pattern>
+      <template>The paper Logic and Discrete Structures (COMP613) has prerequisite papers: MATH502. </template>
+   </category>
+   <category>
+      <pattern>REQ INFS601</pattern>
+      <template>The paper Logical Database Design (INFS601) has prerequisite papers: any one of COMP500 or ENSE501. </template>
+   </category>
+   <category>
+      <pattern>REQ MATH604</pattern>
+      <template>The paper Mathematics of Finance (MATH604) has prerequisite papers: MATH501. </template>
+   </category>
+   <category>
+      <pattern>REQ INFS603</pattern>
+      <template>The paper Needs Analysis Acquisition and Training (INFS603) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP609</pattern>
+      <template>The paper Network and System Administration (COMP609) has prerequisite papers: any one of COMP500 or ENEL504. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP604</pattern>
+      <template>The paper Operating Systems (COMP604) has prerequisite papers: COMP502 and any one of COMP503 or ENSE502. </template>
+   </category>
+   <category>
+      <pattern>REQ INFS602</pattern>
+      <template>The paper Physical Database Design (INFS602) has prerequisite papers: INFS601 and any one of COMP503 or ENSE502. </template>
+   </category>
+   <category>
+      <pattern>REQ STAT600</pattern>
+      <template>The paper Probability (STAT600) has prerequisite papers: MATH501 and MATH502. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP603</pattern>
+      <template>The paper Program Design and Construction (COMP603) has prerequisite papers: any one of COMP503 or COMP610 or ENSE501. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP602</pattern>
+      <template>The paper Software Development Practice (COMP602) has prerequisite papers: any one of COMP603 or COMP610. It also has the corequisite: COMP600. </template>
+   </category>
+   <category>
+      <pattern>REQ STAT601</pattern>
+      <template>The paper Statistical Methods (STAT601) has prerequisite papers: STAT500. </template>
+   </category>
+   <!-- LEVEL 7 PAPERS -->
+   <category>
+      <pattern>REQ COMP714</pattern>
+      <template>The paper Advanced Network Technologies (COMP714) has prerequisite papers: COMP609. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP719</pattern>
+      <template>The paper Applied Human Computer Interaction (COMP719) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ STAT700</pattern>
+      <template>The paper Applied Stochastic Models (STAT700) has prerequisite papers: STAT600. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP717</pattern>
+      <template>The paper Artificial Intelligence (COMP717) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ INFS703</pattern>
+      <template>The paper Contemporary Information Systems (INFS703) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ ENSE701</pattern>
+      <template>The paper Contemporary Methods in Software Engineering (ENSE701) has prerequisite papers: any one of COMP603 or COMP610. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP723</pattern>
+      <template>The paper Data Mining and Knowledge Engineering (COMP723) has prerequisite papers: any one of INFS601 or INFS602. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP713</pattern>
+      <template>The paper Distributed and Mobile Systems (COMP713) has prerequisite papers: COMP611. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP710</pattern>
+      <template>The paper From Perception to Technology: 3-D Display and Haptic Systems (COMP710) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP710</pattern>
+      <template>The paper Game Programming (COMP710) has prerequisite papers: COMP612. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP724</pattern>
+      <template>The paper Health Informatics (COMP724) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP716</pattern>
+      <template>The paper Highly Secure Systems (COMP716) has prerequisite papers: COMP611. </template>
+   </category>
+   <category>
+      <pattern>REQ STAT702</pattern>
+      <template>The paper Industrial and Business Analytics (STAT702) has prerequisite papers: STAT601. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP718</pattern>
+      <template>The paper Information Security Management (COMP718) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP720</pattern>
+      <template>The paper IT Project Practice (COMP720) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ INFS702</pattern>
+      <template>The paper IT Service Management (INFS702) has prerequisite papers: COMP601. </template>
+   </category>
+   <category>
+      <pattern>REQ INFS701</pattern>
+      <template>The paper IT Strategy and Control (INFS701) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP701</pattern>
+      <template>The paper Nature Inspired Computing (COMP701) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ INFS700</pattern>
+      <template>The paper Needs Analysis and Acquisition (INFS700) has prerequisite papers: STAT601. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP715</pattern>
+      <template>The paper Network Security (COMP715) has prerequisite papers: ENEL611. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP712</pattern>
+      <template>The paper Programming Languages (COMP712) has prerequisite papers: any one of COMP603 or COMP610. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP703</pattern>
+      <template>The paper Research and Development Project (COMP703) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP704</pattern>
+      <template>The paper Research and Development Project (COMP704) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP706</pattern>
+      <template>The paper Research and Development Project (COMP706) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP702</pattern>
+      <template>The paper Research and Development Project Part 1 (COMP702) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP705</pattern>
+      <template>The paper Special Topic (COMP705) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ STAT701</pattern>
+      <template>The paper Statistical Computing with SAS (STAT701) has prerequisite papers: STAT601 and any one of MATH500 or MATH501. </template>
+   </category>
+   <category>
+      <pattern>REQ COMP700</pattern>
+      <template>The paper Text and Vision Intelligence (COMP700) has no requisite papers.</template>
+   </category>
+   <category>
+      <pattern>REQ COMP711</pattern>
+      <template>The paper Theory of Computation (COMP711) has prerequisite papers: any one of COMP610 or COMP613. </template>
+   </category>
+   <category>
+      <pattern>WHAT ARE THE REQUIREMENTS FOR * </pattern>
+      <template>
+         <srai>REQ <star/></srai>
+      </template>
+   </category>
+   <category>
+      <pattern>What are the pre-requisites and co- requisites for *</pattern>
+      <template>
+         <srai>REQ <star/></srai>
+      </template>
+   </category>
+</aiml>

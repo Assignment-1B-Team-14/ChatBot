@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" encoding="UTF-8"?>
+   <category>
+      <pattern>FAILED MATH502</pattern>
+      <template>I am sorry You can not enrol for COMP612,COMP610,COMP613,STAT600.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMM501</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED STAT500</pattern>
+      <template>I am sorry You can not enrol for STAT603.</template>
+   </category>
+   <category>
+      <pattern>FAILED ENEL504</pattern>
+      <template>I am sorry You can not enrol for ENEL611,COMP607,COMP609.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP504</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP501</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED MATH501</pattern>
+      <template>I am sorry You can not enrol for MATH604 or STAT600 or I am sorry You can not enrol for STAT701 if you also failed on MATH501.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS500</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP502</pattern>
+      <template>I am sorry You can not enrol for COMP604.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP505</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED MATH500</pattern>
+      <template>I am sorry You can not enrol for STAT701 if you also failed on MATH501.</template>
+   </category>
+   <category>
+      <pattern>FAILED ENSE502</pattern>
+      <template>I am sorry You can not enrol for COMP610 OR INFS602 if you also failed on COMP503.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP500</pattern>
+      <template>I am sorry You can not enrol for COMP503,ENSE502,ENEL611,INFS600 or COMP609 or AND INFS601 if you also failed ENSE501.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP503</pattern>
+      <template>I am sorry You can not enrol for COMP610 OR COMP604 OR INFS602 if you also failed on ENSE502 or COMP603 if you also failed on COMP610 or ENSE501.</template>
+   </category>
+   <category>
+      <pattern>FAILED ENSE501</pattern>
+      <template>I am sorry You can not enrol for COMP503,ENSE502,INFS600 or  AND INFS601 if you also failed ON COMP500 or COMP603 if you also failed on COMP610 or COMP503.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP611</pattern>
+      <template>I am sorry You can not enrol for COMP713 or COMP716.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP612</pattern>
+      <template>I am sorry You can not enrol for COMP710.</template>
+   </category>
+   <category>
+      <pattern>FAILED ENEL611</pattern>
+      <template>I am sorry You can not enrol for COMP715.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS600</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP610</pattern>
+      <template>I am sorry You can not enrol for COMP612 or COMP611 COMP603 if you also failed on COMP503 or ENSE501 or I am sorry You can not enrol for ENSE701 OR COMP712 If you also failed on COMP603 or I am sorry You can not enrol for COMP711 if you also failed on COMP613.</template>
+   </category>
+   <category>
+      <pattern>FAILED STAT603</pattern>
+      <template>I am sorry You can not enrol for COMP612.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP606</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP607</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP600</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP601</pattern>
+      <template>I am sorry You can not enrol for INFS602,INFS702.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP613</pattern>
+      <template>You can not enrol for COMP711 if you also failed on COMP610.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS601</pattern>
+      <template>I am sorry You can not enrol for COMP723.</template>
+   </category>
+   <category>
+      <pattern>FAILED MATH604</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS603</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP609</pattern>
+      <template>I am sorry You can not enrol for COMP714.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP604</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS602</pattern>
+      <template>I am sorry You can not enrol for COMP723.</template>
+   </category>
+   <category>
+      <pattern>FAILED STAT600</pattern>
+      <template>I am sorry You can not enrol for STAT700.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP603</pattern>
+      <template>I am sorry You can not enrol for ENSE701 OR COMP712 If you also failed on COMP610 or You can not enrol for COMP721.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP602</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED STAT601</pattern>
+      <template>I am sorry You can not enrol for STAT702,STAT701.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP714</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP719</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED STAT700</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP717</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS703</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED ENSE701</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP723</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP713</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED ENSE702</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP710</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP724</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP716</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED STAT702</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP718</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP720</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS702</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS701</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP701</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED INFS700</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP715</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP712</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP703</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP704</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP706</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP702</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP705</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED STAT701</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP700</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP711</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>FAILED COMP721</pattern>
+      <template>Sorry to hear that study harder next time.</template>
+   </category>
+   <category>
+      <pattern>I HAVE FAILED * </pattern>
+      <template>
+         <srai>FAILED <star/></srai>
+      </template>
+   </category>
+   <category>
+      <pattern>I WILL FAIL * </pattern>
+      <template>
+         <srai>FAILED <star/></srai>
+      </template>
+   </category>
+</aiml>

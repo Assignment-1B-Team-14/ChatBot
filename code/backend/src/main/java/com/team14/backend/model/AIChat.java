@@ -19,6 +19,7 @@ public class AIChat extends AbstarctResponse {
 	}
 
 	private Chat chatSession;
+	private String ChatID;
 	private ArrayList<Message> messages;
 
 	public ArrayList<Message> getMessages() {
@@ -39,5 +40,13 @@ public class AIChat extends AbstarctResponse {
 		// Remove HTML Tags
 		ret = Jsoup.parse(ret).text();
 		messages.add(new Message(string, ret));
+	}
+
+	public String getChatID() {
+		return ChatID;
+	}
+
+	public void setChatID(String chatID) {
+		ChatID = chatID;
 	}
 }

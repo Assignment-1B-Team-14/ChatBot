@@ -3,3 +3,10 @@
   margin: center;
   aligin: center;
 }
+.Center {
+  text-align: center;
+  margin: center;
+  margin-left: auto;
+  margin-right: auto;
+  aligin: center;
+}

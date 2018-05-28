@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- File: update.aiml -->
+<!-- File: Q3.aiml -->
 <!-- Author: Dr. Richard S. Wallace -->
 <!-- Last modified: May 27, 2018 -->
 <!--  -->
@@ -15,10 +15,13 @@
 <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
 <!--  -->
 <!-- For more information see http://www.alicebot.org -->
-<category><pattern>BUILD</pattern>
-<template>Sun May 27 21:49:08 NZST 2018</template>
+<category><pattern>MAJOR FOR SOFTWARE DEVELOPMENT MAJOR</pattern>
+<template>The papers required for sofware development major are: Program Design and Construction Software Engineering Software Development Practice Applied Human Computer Interaction Operating Systems OR Physical Database Design Web Development OR Distributed and Mobile Systems</template>
 </category>
-<category><pattern>DELEVLOPMENT ENVIRONMENT</pattern>
-<template>Program AB 0.0.4.3 beta -- AI Foundation Reference AIML 2.0 implementation</template>
+<category><pattern>WHAT ARE THE PAPERS REQUIRED FOR *</pattern>
+<template><srai>MAJOR FOR <star/></srai></template>
+</category>
+<category><pattern>CAN YOU TELL ME THE PAPERS REQUIRED FOR *</pattern>
+<template><srai>MAJOR FOR <star/></srai></template>
 </category>
 </aiml>

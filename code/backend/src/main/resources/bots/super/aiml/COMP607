@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- File: update.aiml -->
+<!-- File: COMP607 -->
 <!-- Author: Dr. Richard S. Wallace -->
 <!-- Last modified: May 27, 2018 -->
 <!--  -->
@@ -15,10 +15,7 @@
 <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
 <!--  -->
 <!-- For more information see http://www.alicebot.org -->
-<category><pattern>BUILD</pattern>
-<template>Sun May 27 21:49:08 NZST 2018</template>
-</category>
-<category><pattern>DELEVLOPMENT ENVIRONMENT</pattern>
-<template>Program AB 0.0.4.3 beta -- AI Foundation Reference AIML 2.0 implementation</template>
+<category><pattern>FAILED ENEL504</pattern>
+<template>I am sorry You can not enrol for ENEL611</template>
 </category>
 </aiml>

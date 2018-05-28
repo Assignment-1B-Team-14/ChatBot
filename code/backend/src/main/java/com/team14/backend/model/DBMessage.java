@@ -3,6 +3,7 @@ package com.team14.backend.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -80,7 +81,9 @@ public class DBMessage implements Serializable {
 	}
 
 	private LocalDateTime TIMESTAMP;
+	@Column(length = 2048)
 	private String question;
+	@Column(length = 2048)
 	private String answer;
 	private String chatID;
 	private String sessionID;

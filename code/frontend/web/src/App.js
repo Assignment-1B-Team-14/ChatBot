@@ -111,21 +111,66 @@ class App extends Component {
           <Modal size="lg" isOpen={this.state.modal} toggle={this.toggle}>
             <ModalBody>
               <Jumbotron>
-                <h1>Super-Bot</h1>
-                <p>
-                  Super-Bot is an AI based ChatBot developt by AUT Students.
-                </p>
-                <p>
-                  The Bot is based on basic technology and does not use any
-                  third-party-services.
-                </p>
-                <p>
-                  The project is not finished yet, so there is still a need for
-                  optimization.
-                </p>
+                <div>
+                  <h3>SUPER-BOT manual</h3>
+                  <h4>Commands Lists</h4>
+                  <ul>
+                    <li>
+                      <em>
+                        <strong>REQ</strong>{' '}
+                      </em>followed by paper code to show the requisite papers
+                    </li>
+                    <li>
+                      <em>
+                        <strong>MAJOR FOR</strong>
+                      </em>&nbsp;followed by paper name&nbsp;to find the paper
+                      required for spesific paper
+                    </li>
+                    <li>
+                      <em>
+                        <strong>JOB&nbsp;NAME</strong>
+                      </em>{' '}
+                      ex IT SUPERVISOR to find the paper required for (ex IT
+                      SUPERVISOR)
+                    </li>
+                    <li>
+                      <em>
+                        <strong>FAILED followed</strong>{' '}
+                      </em>by paper code to find out what paper you can not take
+                      if you failed on a paper
+                    </li>
+                    <li>
+                      <em>
+                        <strong>HELP</strong>{' '}
+                      </em>to get a help
+                    </li>
+                    <li>
+                      <em>
+                        <strong>JOBS</strong>&nbsp;
+                      </em>to list all possible jobs
+                    </li>
+                  </ul>
+                  <hr />
+                  <p>
+                    <Button size="lg" color="primary" onClick={this.toggle}>
+                      Try it!
+                    </Button>
+                  </p>
+                  <p>
+                    For optimization we are saving all messages anonymously. You
+                    accept this by using the Bot.
+                  </p>
+                  <hr />
+                  <h4>BOT contacts:</h4>
+                  <p>
+                    <a href="mailto:super-bot@fw-software.com">
+                      super-bot@fw-software.com
+                    </a>
+                  </p>
+                </div>
                 <hr />
                 <p>
-                  <h3>Created by:</h3>
+                  <h4>Created by:</h4>
                   <ul>
                     <li>Ashton Ho</li>
                     <li>Shailendrasinh Vijaysinh Jadeja</li>
@@ -134,14 +179,38 @@ class App extends Component {
                   </ul>
                 </p>
                 <hr />
+                <h4>Example</h4>
+                <p>Human: REQ COMP501</p>
                 <p>
-                  <Button size="lg" color="primary" onClick={this.toggle}>
-                    Try it!
-                  </Button>
+                  Robot: The paper Computing Technology in Society (COMP501) has
+                  no requisite papers
                 </p>
+                <hr />
+                <p>Human: MAJOR FOR software development major&nbsp;</p>
                 <p>
-                  For optimization we are saving all messages anonymously. You
-                  accept this by using the Bot.
+                  Robot: &nbsp;The papers required for sofware development major
+                  are: Program Design and Construction Software Engineering
+                  Software Development Practice Applied Human Computer
+                  Interaction Operating Systems OR Physical Database Design Web
+                  Development OR Distributed and Mobile Systems
+                </p>
+                <hr />
+                <p>Human: IT SUPERVISOR</p>
+                <p>
+                  Robot: The papers required for a it supervisor are:
+                  Foundations of Information Science Data Mining and Knowledge
+                  Engineering Statistical Methods Artificial Intelligence Data
+                  Structures and Algorithms OR Physical Database Design Text and
+                  Vision Intelligence OR Nature Inspired Computing
+                </p>
+                <hr />
+                <p>If there is no prerequisite for the paper</p>
+                <p>Human: FAILED COMM501</p>
+                <p>Robot: Sorry to hear that study harder next time</p>
+                <p>If there is&nbsp; prerequisite for the paper</p>
+                <p>Human: FAILED STAT500</p>
+                <p>
+                  Robot: &nbsp;&nbsp;I am sorry You can not enrol for STAT603.
                 </p>
               </Jumbotron>
             </ModalBody>

@@ -4,7 +4,7 @@ matrix:
     # Backend
     - language: java
       sudo: required
-      jdk: oraclejdk8
+      jdk: openjdk8
       env:
           - TYPE=BACKEND
       before_script:

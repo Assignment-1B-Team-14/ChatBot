@@ -10,7 +10,7 @@ import {
 } from 'reactstrap';
 import './App.css';
 
-const backendURL = 'http://localhost:14000';
+const backendURL = 'http://super-bot.pizza:14000';
 
 class App extends Component {
   constructor(props) {

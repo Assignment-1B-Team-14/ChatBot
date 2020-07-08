@@ -36,7 +36,7 @@ public class ChatControler {
 		chat.setChatID(randomAlphaNumeric(64));
 		chats.put(session.getId(), chat);
 		resp.setHeader("Access-Control-Allow-Credentials", "true");
-		resp.setHeader("Access-Control-Allow-Origin", "http://super-bot.pizza");
+		resp.setHeader("Access-Control-Allow-Origin", "http://" + request.getLocalAddr() + ":3000");
 		return new ResponseWrapper(chats.get(session.getId()), Returncodes.OKAY);
 	}
 
@@ -55,7 +55,7 @@ public class ChatControler {
 	public ResponseWrapper getMessages(HttpSession session, @RequestParam("message") String message,
 			HttpServletRequest request, HttpServletResponse resp) {
 		resp.setHeader("Access-Control-Allow-Credentials", "true");
-		resp.setHeader("Access-Control-Allow-Origin", "http://super-bot.pizza");
+		resp.setHeader("Access-Control-Allow-Origin", "http://" + request.getLocalAddr() + ":3000");
 		if (!chatExists(session.getId()) && (message != null))
 			return new ResponseWrapper(Returncodes.CHAT_NOT_FOUND);
 		chats.get(session.getId()).newMessage(message);

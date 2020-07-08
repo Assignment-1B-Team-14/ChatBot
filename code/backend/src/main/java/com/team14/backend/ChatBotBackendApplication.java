@@ -14,7 +14,7 @@ public class ChatBotBackendApplication {
 	}
 
 	public void run(String[] args) {
-		path = System.getProperty("bot.path");
+		path = System.getProperty("BOT_PATH");
 		System.out.println(path);
 		ChatBotFactory.startUp();
 		SpringApplication.run(ChatBotBackendApplication.class, args);
